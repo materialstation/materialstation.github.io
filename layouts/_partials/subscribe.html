@@ -1,0 +1,11 @@
+{{- with site.Params.buttondown_username }}
+<aside class="subscribe">
+  <h2>{{ T "subscribe_title" }}</h2>
+  <p>{{ T "subscribe_text" }}</p>
+  <form action="https://buttondown.com/api/emails/embed-subscribe/{{ . }}" method="post" target="_blank">
+    <label class="sr-only" for="bd-email-{{ $.RelPermalink | md5 }}">{{ T "subscribe_placeholder" }}</label>
+    <input id="bd-email-{{ $.RelPermalink | md5 }}" type="email" name="email" required placeholder="{{ T "subscribe_placeholder" }}" autocomplete="email">
+    <button type="submit">{{ T "subscribe_button" }}</button>
+  </form>
+</aside>
+{{- end }}

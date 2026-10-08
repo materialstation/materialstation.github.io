@@ -1,0 +1,9 @@
+{{ define "main" }}
+<div class="wrap narrow page-head">
+  <h1>{{ .Title }}</h1>
+  {{ with .Content }}<div class="lead">{{ . }}</div>{{ end }}
+</div>
+<div class="wrap narrow">
+  {{ range .Pages }}{{ partial "card.html" . }}{{ else }}<p class="empty">{{ T "nothing_yet" }}</p>{{ end }}
+</div>
+{{ end }}

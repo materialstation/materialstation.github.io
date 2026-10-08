@@ -1,0 +1,15 @@
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p><strong class="foot-brand">{{ site.Params.brand }} · {{ site.Params.brand_other }}</strong><br>© {{ now.Year }} {{ site.Params.author }} · <span class="mono">{{ site.Params.license }}</span></p>
+    <p class="links">
+      {{ with site.Params.email }}<a href="mailto:{{ . }}">Email</a>{{ end }}
+      {{ with site.Params.linkedin }}<a href="{{ . }}" rel="me">LinkedIn</a>{{ end }}
+      {{ with site.Params.instagram }}<a href="{{ . }}" rel="me">Instagram</a>{{ end }}
+      {{ with site.Params.twitter }}<a href="{{ . }}" rel="me">X</a>{{ end }}
+      {{ with site.Params.orcid }}<a href="{{ . }}" rel="me">ORCID</a>{{ end }}
+      {{ with site.Params.scholar }}<a href="{{ . }}" rel="me">Scholar</a>{{ end }}
+      {{ with site.Params.github }}<a href="{{ . }}" rel="me">GitHub</a>{{ end }}
+      {{ with site.Home.OutputFormats.Get "rss" }}<a href="{{ .RelPermalink }}">RSS</a>{{ end }}
+    </p>
+  </div>
+</footer>

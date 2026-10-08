@@ -1,0 +1,27 @@
+{{ define "main" }}
+{{- $isPost := in (slice "writings" "yazilar" "case-studies" "vaka-analizleri") .Section }}
+<article class="wrap narrow post">
+  <header class="post-head">
+    {{ if $isPost }}
+    <p class="meta mono">
+      <a class="kind" href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
+      <span>{{ .ReadingTime }} {{ T "read_time" }}</span>
+    </p>
+    {{ end }}
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+    {{ with .Translations }}
+    <p class="translation">{{ T "also_in" }}: {{ range . }}<a href="{{ .RelPermalink }}" hreflang="{{ .Language.Lang }}">{{ .Language.Label }}</a>{{ end }}</p>
+    {{ end }}
+  </header>
+  <div class="prose">{{ .Content }}</div>
+  {{ with .GetTerms "tags" }}
+  <footer class="post-foot"><span class="mono">{{ T "tags" }}:</span> <span class="tags">{{ range . }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}</span></footer>
+  {{ end }}
+  {{ if $isPost }}
+  {{ partial "subscribe.html" . }}
+  {{ partial "comments.html" . }}
+  {{ end }}
+</article>
+{{ end }}

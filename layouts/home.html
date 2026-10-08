@@ -1,0 +1,58 @@
+{{ define "main" }}
+{{- $p := site.Language.Params }}
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow mono">{{ $p.role }}</p>
+      <h1>{{ site.Params.brand }}</h1>
+      <p class="byline">{{ site.Params.author }}</p>
+      <p class="degree">{{ $p.degree }}</p>
+      {{ with site.Params.book }}<p class="book">📖 {{ . | safeHTML }}</p>{{ end }}
+      <p class="tagline">{{ $p.tagline }}</p>
+      {{ with .Content }}<div class="hero-intro">{{ . }}</div>{{ end }}
+    </div>
+    <svg class="lattice" viewBox="0 0 330 310" role="img" aria-label="Face-centred cubic unit cell">
+      <g class="edges back">
+        <line x1="130" y1="60" x2="130" y2="200"/><line x1="130" y1="200" x2="60" y2="250"/><line x1="130" y1="200" x2="270" y2="200"/>
+      </g>
+      <g class="edges">
+        <polygon points="60,110 200,110 200,250 60,250"/>
+        <polyline points="60,110 130,60 270,60 200,110"/>
+        <polyline points="270,60 270,200 200,250"/>
+      </g>
+      <g class="bonds">
+        <line x1="130" y1="180" x2="165" y2="85"/><line x1="130" y1="180" x2="95" y2="155"/><line x1="130" y1="180" x2="235" y2="155"/><line x1="130" y1="180" x2="165" y2="225"/>
+      </g>
+      <g class="atoms corner">
+        <circle cx="130" cy="200" r="10"/><circle cx="130" cy="60" r="10"/><circle cx="270" cy="200" r="10"/>
+        <circle cx="270" cy="60" r="10"/><circle cx="60" cy="110" r="10"/><circle cx="200" cy="110" r="10"/>
+        <circle cx="200" cy="250" r="10"/><circle cx="60" cy="250" r="10"/>
+      </g>
+      <g class="atoms face">
+        <circle cx="200" cy="130" r="11"/><circle cx="165" cy="225" r="11"/><circle cx="95" cy="155" r="11"/>
+        <circle cx="165" cy="85" r="11"/><circle cx="235" cy="155" r="11"/><circle cx="130" cy="180" r="12"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+{{- $writings := where site.RegularPages "Section" "in" (slice "writings" "yazilar") }}
+{{- $cases := where site.RegularPages "Section" "in" (slice "case-studies" "vaka-analizleri") }}
+<div class="wrap home-grid">
+  <section>
+    <div class="section-head">
+      <h2>{{ T "latest_writings" }}</h2>
+      {{ with $writings }}{{ with (index . 0).Parent }}<a class="more" href="{{ .RelPermalink }}">{{ T "all_writings" }}</a>{{ end }}{{ end }}
+    </div>
+    {{ range first 4 $writings }}{{ partial "card.html" . }}{{ else }}<p class="empty">{{ T "nothing_yet" }}</p>{{ end }}
+  </section>
+  <section>
+    <div class="section-head">
+      <h2>{{ T "latest_cases" }}</h2>
+      {{ with $cases }}{{ with (index . 0).Parent }}<a class="more" href="{{ .RelPermalink }}">{{ T "all_cases" }}</a>{{ end }}{{ end }}
+    </div>
+    {{ range first 4 $cases }}{{ partial "card.html" . }}{{ else }}<p class="empty">{{ T "nothing_yet" }}</p>{{ end }}
+  </section>
+</div>
+{{ with site.Params.buttondown_username }}<div class="wrap home-subscribe">{{ partial "subscribe.html" $ }}</div>{{ end }}
+{{ end }}

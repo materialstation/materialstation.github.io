@@ -1,0 +1,105 @@
+# =============================================================
+#  SITE SETTINGS — edit the lines marked  <-- EDIT
+# =============================================================
+
+# Leave this as it is. GitHub fills in the real address automatically.
+baseURL = "https://example.github.io/"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+enableRobotsTXT = true
+
+[params]
+  # Your name and brand are set per language further down.
+  email     = "you@example.com"                # <-- EDIT (or leave "" to hide)
+  linkedin  = "https://www.linkedin.com/in/your-profile"   # <-- EDIT (or "")
+  instagram = "https://www.instagram.com/materials_station"
+  twitter   = "https://x.com/materialstation"
+  orcid    = ""                                # e.g. "https://orcid.org/0000-0000-0000-0000"
+  scholar  = ""                                # Google Scholar profile link
+  github   = ""                                # GitHub profile link
+  license  = "CC BY-NC 4.0"
+
+  # ---- Reader interaction (leave "" to hide) ----
+  cusdis_app_id       = ""   # <-- EDIT: from cusdis.com → your website → "Embed Code" → data-app-id
+  buttondown_username = ""   # <-- EDIT: your Buttondown username (newsletter sign-up box)
+
+[taxonomies]
+  tag = "tags"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.goldmark.extensions.passthrough]
+  enable = true
+  [markup.goldmark.extensions.passthrough.delimiters]
+    block  = [['\[', '\]'], ['$$', '$$']]
+    inline = [['\(', '\)']]
+
+# ---------------- ENGLISH ----------------
+[languages.en]
+  contentDir   = "content/en"
+  label        = "English"
+  locale       = "en"
+  weight       = 1
+  title        = "Materials Station"
+  [languages.en.params]
+    brand    = "Materials Station"
+    brand_other = "Malzeme İstasyonu"
+    initials = "MS"
+    author   = "Merve Ustuncelik Ikbal"
+    book     = "Author of the book <em>Malzeme İstasyonu</em>"
+    role    = "Metallurgical & Materials Engineer"
+    degree  = "M.Sc. Materials Science & Nanotechnology"
+    tagline = "Popular science writing and case studies on the materials that shape our world."
+
+  [[languages.en.menus.main]]
+    name = "Writings"
+    pageRef = "/writings"
+    weight = 1
+  [[languages.en.menus.main]]
+    name = "Case Studies"
+    pageRef = "/case-studies"
+    weight = 2
+  [[languages.en.menus.main]]
+    name = "About"
+    pageRef = "/about"
+    weight = 3
+  [[languages.en.menus.main]]
+    name = "Contact"
+    pageRef = "/contact"
+    weight = 4
+
+# ---------------- TÜRKÇE ----------------
+[languages.tr]
+  contentDir   = "content/tr"
+  label        = "Türkçe"
+  locale       = "tr"
+  weight       = 2
+  title        = "Malzeme İstasyonu"
+  [languages.tr.params]
+    brand    = "Malzeme İstasyonu"
+    brand_other = "Materials Station"
+    initials = "Mİ"
+    author   = "Merve Üstünçelik İkbal"
+    book     = "<em>Malzeme İstasyonu</em> kitabının yazarı"
+    role    = "Metalurji ve Malzeme Mühendisi"
+    degree  = "Malzeme Bilimi ve Nanoteknoloji Yüksek Lisansı"
+    tagline = "Dünyamızı biçimlendiren malzemeler üzerine popüler bilim yazıları ve vaka analizleri."
+
+  [[languages.tr.menus.main]]
+    name = "Yazılar"
+    pageRef = "/yazilar"
+    weight = 1
+  [[languages.tr.menus.main]]
+    name = "Vaka Analizleri"
+    pageRef = "/vaka-analizleri"
+    weight = 2
+  [[languages.tr.menus.main]]
+    name = "Hakkımda"
+    pageRef = "/hakkimda"
+    weight = 3
+  [[languages.tr.menus.main]]
+    name = "İletişim"
+    pageRef = "/iletisim"
+    weight = 4

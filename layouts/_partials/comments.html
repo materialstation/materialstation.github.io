@@ -1,0 +1,17 @@
+{{- with site.Params.cusdis_app_id }}
+<section class="comments" aria-labelledby="comments-title">
+  <h2 id="comments-title">{{ T "comments" }}</h2>
+  <p class="note">{{ T "comments_note" }}</p>
+  <div id="cusdis_thread"
+    data-host="https://cusdis.com"
+    data-app-id="{{ . }}"
+    data-page-id="{{ $.RelPermalink }}"
+    data-page-url="{{ $.Permalink }}"
+    data-page-title="{{ $.Title }}"
+    data-theme="auto"></div>
+  {{- if ne site.Language.Lang "en" }}
+  <script defer src="https://cusdis.com/js/widget/lang/{{ site.Language.Lang }}.js"></script>
+  {{- end }}
+  <script defer src="https://cusdis.com/js/cusdis.es.js"></script>
+</section>
+{{- end }}

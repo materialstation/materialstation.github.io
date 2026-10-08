@@ -1,0 +1,10 @@
+{{- $kind := cond (in (slice "case-studies" "vaka-analizleri") .Section) "case" "writing" }}
+<article class="card card-{{ $kind }}">
+  <p class="meta mono">
+    <span class="kind">{{ if eq $kind "case" }}{{ T "case_study" }}{{ else }}{{ T "writing" }}{{ end }}</span>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_medium" }}</time>
+  </p>
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  <p class="summary">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 180 }}{{ end }}</p>
+  {{ with .GetTerms "tags" }}<p class="tags">{{ range . }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}</p>{{ end }}
+</article>
