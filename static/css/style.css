@@ -161,3 +161,26 @@ img { max-width: 100%; height: auto; }
 .book em { color: var(--ink); }
 .foot-brand { color: var(--ink); font-weight: 600; }
 .footer-inner { align-items: flex-end; }
+/* ===== Home: one title, author section, logo ===== */
+:root { --logo-atom: #c2563b; }
+@media (prefers-color-scheme: dark) { :root { --logo-atom: #e07b5c; } }
+.lg-dia, .lg-body { fill: var(--accent); }
+.lg-atom circle { fill: var(--logo-atom); stroke: var(--bg); stroke-width: 3; }
+.lg-atom .lg-core { stroke-width: 2.6; }
+.brand-logo { width: 40px; height: 40px; display: block; flex: none; }
+.hero-inner { grid-template-columns: 1fr; padding-top: 72px; padding-bottom: 64px; }
+.hero h1 { margin-bottom: 14px; }
+.section-head { flex-wrap: wrap; gap: 4px 14px; }
+.section-head .more { margin-bottom: 10px; }
+.author { max-width: 1080px; padding-bottom: 64px; }
+.author-card { border-top: 2px solid var(--ink); padding-top: 24px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0 26px; align-items: center; max-width: 740px; }
+.author-logo { width: 72px; height: 115px; }
+.author-info { display: grid; gap: 4px; }
+.author-info p { margin: 0; }
+.author-info .eyebrow { margin-bottom: 6px; }
+.author-info .book { margin: 2px 0 8px; }
+@media (max-width: 760px) {
+  .hero-inner { padding-top: 48px; padding-bottom: 44px; }
+  .author-card { gap: 0 18px; }
+  .author-logo { width: 52px; height: 83px; }
+}
