@@ -30,11 +30,18 @@
 
 <section class="wrap author" aria-labelledby="author-title">
   <div class="author-card">
-    <p class="eyebrow mono" id="author-title">{{ if $tr }}Yazar hakkında{{ else }}About the author{{ end }}</p>
-    <p class="byline">{{ site.Params.author }}</p>
-    <p class="degree">{{ $p.role }} · {{ $p.degree }}</p>
-    {{ with site.Params.book }}<p class="book">📖 {{ . | safeHTML }}</p>{{ end }}
-    {{ with site.GetPage (cond $tr "/hakkimda" "/about") }}<a class="more" href="{{ .RelPermalink }}">{{ if $tr }}Hakkımda daha fazlası →{{ else }}More about me →{{ end }}</a>{{ end }}
+    <svg class="author-logo" viewBox="0 0 100 160" aria-hidden="true">
+      <path class="lg-body" d="M19 92 C19 83 26 79 35 79 L65 79 C74 79 81 83 81 92 C79 113 65 136 50 158 C35 136 21 113 19 92 Z"/>
+      <path class="lg-dia" d="M50 13 L75.5 38.5 L50 64 L24.5 38.5 Z"/>
+      <g class="lg-atom"><circle cx="50" cy="10.5" r="8.2"/><circle cx="78" cy="38.5" r="8.2"/><circle cx="50" cy="66.5" r="8.2"/><circle cx="22" cy="38.5" r="8.2"/><circle class="lg-core" cx="50" cy="38.5" r="5.4"/></g>
+    </svg>
+    <div class="author-info">
+      <p class="eyebrow mono" id="author-title">{{ if $tr }}Yazar hakkında{{ else }}About the author{{ end }}</p>
+      <p class="byline">{{ site.Params.author }}</p>
+      <p class="degree">{{ $p.role }} · {{ $p.degree }}</p>
+      {{ with site.Params.book }}<p class="book">📖 {{ . | safeHTML }}</p>{{ end }}
+      {{ with site.GetPage (cond $tr "/hakkimda" "/about") }}<a class="more" href="{{ .RelPermalink }}">{{ if $tr }}Hakkımda daha fazlası →{{ else }}More about me →{{ end }}</a>{{ end }}
+    </div>
   </div>
 </section>
 {{ with site.Params.buttondown_username }}<div class="wrap home-subscribe">{{ partial "subscribe.html" $ }}</div>{{ end }}
