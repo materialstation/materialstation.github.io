@@ -1,8 +1,13 @@
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="{{ site.Home.RelPermalink }}">
-      <span class="brand-mark" aria-hidden="true">{{ site.Params.initials }}</span>
+    <a class="brand" href="{{ site.Home.RelPermalink }}" aria-label="{{ site.Params.brand }}">
+      <svg class="brand-logo" viewBox="11 -1 78 78" aria-hidden="true">
+        <path class="lg-dia" d="M50 13 L75.5 38.5 L50 64 L24.5 38.5 Z"/>
+        <g class="lg-atom"><circle cx="50" cy="10.5" r="8.2"/><circle cx="78" cy="38.5" r="8.2"/><circle cx="50" cy="66.5" r="8.2"/><circle cx="22" cy="38.5" r="8.2"/><circle class="lg-core" cx="50" cy="38.5" r="5.4"/></g>
+      </svg>
+      {{- if not .IsHome }}
       <span class="brand-name">{{ site.Params.brand }}</span>
+      {{- end }}
     </a>
     <nav class="nav" aria-label="Main">
       {{- $current := . }}
