@@ -38,7 +38,7 @@ Malzememin, sert saha zeminine çarpma anlarındaki darbelere karşı dayanımı
 
 <figure style="max-width:360px;margin-left:auto;margin-right:auto">
   <img src="kaucuk-bitkisi.jpg" alt="Sarı saksıda, parlak koyu yeşil yapraklı bir kauçuk bitkisi (Ficus elastica).">
-  <figcaption>Oda arkadaşım olan kauçuk bitkisi.</figcaption>
+  <figcaption>Oda arkadaşım olan kauçuk bitkisi (<em>Ficus elastica</em>). Bir zamanlar ondan da kauçuk elde edilse de, bugün kullandığımız doğal kauçuğun neredeyse tamamının Brezilya kauçuk ağacının (<em>Hevea brasiliensis</em>) özsuyundan geldiğini belirtmekte fayda var.</figcaption>
 </figure>
 
 Golbolun bu mavi topu, malzemelerin hayata dokunuşunun örneklerinden yalnızca biri. Daha nicelerini konuşmak için malzemelere kulak verelim!
