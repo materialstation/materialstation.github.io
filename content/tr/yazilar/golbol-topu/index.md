@@ -43,8 +43,11 @@ Malzememin, sert saha zeminine çarpma anlarındaki darbelere karşı dayanımı
 
 Golbolun bu mavi topu, malzemelerin hayata dokunuşunun örneklerinden yalnızca biri. Daha nicelerini konuşmak için malzemelere kulak verelim!
 
-### Kaynakça
+### <details class="kaynakca">
+<summary>Kaynakça</summary>
 
 - [koza24.com](https://www.koza24.com/)
 - [olympics.com](https://olympics.com/)
 - [usaba.org](https://www.usaba.org/)
+
+</details>
