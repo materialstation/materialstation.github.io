@@ -1,5 +1,5 @@
 ---
-title: "“Kim Sonsuza Kadar Yaşamak İster?”"
+title: "Kim Sonsuza Kadar Yaşamak İster?"
 date: 2024-11-08
 description: "5 Boyutlu Hafıza Kristali"
 tags: ["5D hafıza kristali", "veri depolama", "erimiş kuvars", "optik", "nanoteknoloji"]
