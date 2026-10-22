@@ -61,3 +61,6 @@ body { font-size: 18px; }
 
 /* Article layout: paragraphs justified (iki yana yaslı) */
 .prose p, .prose li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+
+/* Resim alti aciklamalar ortali */
+.prose figcaption { text-align: center; }
