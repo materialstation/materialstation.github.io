@@ -1,0 +1,20 @@
+{{- $p := .page }}{{ $i := .i }}{{ $feat := .featured }}
+{{- $img := partial "thumb.html" $p }}
+{{- $tr := eq site.Language.Lang "tr" }}
+<article class="tile{{ if $feat }} tile-feat{{ end }}">
+  <a class="tile-media" href="{{ $p.RelPermalink }}" tabindex="-1" aria-hidden="true">
+    {{- if $img }}<img src="{{ $img }}" alt="" loading="{{ if $feat }}eager{{ else }}lazy{{ end }}">
+    {{- else }}<span class="tile-blank"></span>{{ end }}
+    <span class="tile-no mono">{{ printf "%02d" $i }}</span>
+  </a>
+  <div class="tile-body">
+    <p class="tile-meta mono">
+      <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date | time.Format ":date_medium" }}</time>
+      <span>{{ $p.ReadingTime }} {{ T "read_time" }}</span>
+    </p>
+    <h3><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h3>
+    <p class="tile-sum">{{ with $p.Description }}{{ . }}{{ else }}{{ $p.Summary | plainify | truncate 160 }}{{ end }}</p>
+    {{ with $p.GetTerms "tags" }}<p class="tile-tags mono">{{ range first 3 . }}<a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>{{ end }}</p>{{ end }}
+    <span class="tile-go mono" aria-hidden="true">{{ if $tr }}Oku{{ else }}Read{{ end }} <b>→</b></span>
+  </div>
+</article>

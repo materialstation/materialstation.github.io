@@ -1,0 +1,24 @@
+{{- /* Kapak resmi: front matter "image" ya da yazıdaki ilk <img>. Küçültülmüş webp döndürür. */ -}}
+{{- $src := .Params.image | default "" -}}
+{{- if not $src -}}
+  {{- with findRESubmatch `<img[^>]*\ssrc="([^"]+)"` .RawContent 1 -}}{{- $src = index (index . 0) 1 -}}{{- end -}}
+{{- end -}}
+{{- $out := "" -}}
+{{- if $src -}}
+  {{- $res := false -}}
+  {{- if hasPrefix $src "../" -}}
+    {{- with .Parent -}}{{- $res = .Resources.Get (strings.TrimPrefix "../" $src) -}}{{- end -}}
+  {{- else if not (or (hasPrefix $src "/") (hasPrefix $src "http")) -}}
+    {{- $res = .Resources.Get $src -}}
+  {{- end -}}
+  {{- if $res -}}
+    {{- $out = ($res.Fill "900x560 Smart webp q78").RelPermalink -}}
+  {{- else if hasPrefix $src "../" -}}
+    {{- $out = printf "%s%s" .Parent.RelPermalink (strings.TrimPrefix "../" $src) -}}
+  {{- else if or (hasPrefix $src "/") (hasPrefix $src "http") -}}
+    {{- $out = $src -}}
+  {{- else -}}
+    {{- $out = printf "%s%s" .RelPermalink $src -}}
+  {{- end -}}
+{{- end -}}
+{{- return $out -}}
