@@ -64,13 +64,17 @@ enableRobotsTXT = true
     pageRef = "/case-studies"
     weight = 2
   [[languages.en.menus.main]]
+    name = "My Book"
+    pageRef = "/my-book"
+    weight = 3
+  [[languages.en.menus.main]]
     name = "About"
     pageRef = "/about"
-    weight = 3
+    weight = 4
   [[languages.en.menus.main]]
     name = "Contact"
     pageRef = "/contact"
-    weight = 4
+    weight = 5
 
 # ---------------- TÜRKÇE ----------------
 [languages.tr]
@@ -98,10 +102,14 @@ enableRobotsTXT = true
     pageRef = "/vaka-analizleri"
     weight = 2
   [[languages.tr.menus.main]]
+    name = "Kitabım"
+    pageRef = "/kitabim"
+    weight = 3
+  [[languages.tr.menus.main]]
     name = "Hakkımda"
     pageRef = "/hakkimda"
-    weight = 3
+    weight = 4
   [[languages.tr.menus.main]]
     name = "İletişim"
     pageRef = "/iletisim"
-    weight = 4
+    weight = 5
