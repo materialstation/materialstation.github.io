@@ -1,5 +1,3 @@
 ---
-title: "Vaka Analizleri"
-translationKey: "cases"
+title: "Ana Sayfa"
 ---
-Mühendislik hasarları ve malzeme seçimi problemleri, malzeme bilimi bakış açısıyla inceleniyor.
