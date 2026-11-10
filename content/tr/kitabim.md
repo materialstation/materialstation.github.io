@@ -10,9 +10,9 @@ isbn: "978-975-44967-4-1"
 genre: "Popüler bilim · Öykü"
 
 lead: |
-  Ankara'da yağmurlu bir sonbahar gecesi, bir park bankı ve iki yabancı…
+  Hayat, birbirine ihtiyacı olan ama birbirinin varlığından habersiz yabancıların yollarını kesiştirmeyi sever. Bu kez malzemelerden yardım alıyor…
 
-  Hayatı turuncu bir paketle altüst olan genç bilim yazarı Merih, dışarıdan huysuz ama yufka yürekli Gülbeyaz ve elleri yara izleriyle dolu, malzemelerle konuştuğunu söyleyen gizemli Roy. Bir atkının motifinin kristal kafese, seramik bir yüzdeki çatlakların insanın taşıdığı yüklere dönüştüğü; formül ezberletmeden etrafınızdaki nesnelere başka gözle baktıran bir öykü.
+  Hayatının anlamını sorguladığı bir zamanda Merih'in yolu, malzemelerle konuştuğunu söyleyen gizemli Roy'la kesişir. Bir atkının motifinin kristal kafese, seramik bir yüzdeki çatlakların insanın taşıdığı yüklere dönüştüğü; formül ezberletmeden etrafınızdaki nesnelere başka gözle baktıran bir öykü.
 
 door: "kitap-kapi.jpg"
 illus: "Yazara ait"
