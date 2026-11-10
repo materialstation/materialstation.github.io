@@ -11,8 +11,8 @@ enableRobotsTXT = true
 
 [params]
   # Your name and brand are set per language further down.
-  email     = "you@example.com"                # <-- EDIT (or leave "" to hide)
-  linkedin  = "https://www.linkedin.com/in/your-profile"   # <-- EDIT (or "")
+  email     = "malzemeistasyonu@gmail.com"                # <-- EDIT (or leave "" to hide)
+  linkedin  = ""   # <-- EDIT (or "")
   instagram = "https://www.instagram.com/materials_station"
   twitter   = "https://x.com/materialstation"
   orcid    = ""                                # e.g. "https://orcid.org/0000-0000-0000-0000"
@@ -51,7 +51,7 @@ enableRobotsTXT = true
     book     = "Author of the book <em>Malzeme İstasyonu</em>"
     role    = "Metallurgical & Materials Engineer"
     degree  = "M.Sc. Materials Science & Nanotechnology"
-    tagline = "Popular science writing and case studies on the materials that shape our world."
+    tagline = ""
 
   [[languages.en.menus.main]]
     name = "Writings"
@@ -85,7 +85,7 @@ enableRobotsTXT = true
     book     = "<em>Malzeme İstasyonu</em> kitabının yazarı"
     role    = "Metalurji ve Malzeme Mühendisi"
     degree  = "Malzeme Bilimi ve Nanoteknoloji Yüksek Lisansı"
-    tagline = "Dünyamızı biçimlendiren malzemeler üzerine popüler bilim yazıları ve vaka analizleri."
+    tagline = ""
 
   [[languages.tr.menus.main]]
     name = "Yazılar"
