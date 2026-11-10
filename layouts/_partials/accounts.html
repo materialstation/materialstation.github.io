@@ -1,0 +1,10 @@
+{{- /* Tüm hesapların listesi: [ad, simge, adres, görünen metin] */ -}}
+{{- $p := site.Params -}}
+{{- $tr := eq site.Language.Lang "tr" -}}
+{{- $l := slice -}}
+{{- with $p.email }}{{ $l = $l | append (dict "name" (cond $tr "E-posta" "Email") "icon" "email" "url" (printf "mailto:%s" .) "label" .) }}{{ end -}}
+{{- with $p.youtube }}{{ $l = $l | append (dict "name" "YouTube" "icon" "youtube" "url" . "label" "@materialstation") }}{{ end -}}
+{{- with $p.instagram }}{{ $l = $l | append (dict "name" "Instagram" "icon" "instagram" "url" . "label" "@materials_station") }}{{ end -}}
+{{- with $p.twitter }}{{ $l = $l | append (dict "name" "X · Twitter" "icon" "x" "url" . "label" "@materialstation") }}{{ end -}}
+{{- with $p.linkedin }}{{ $l = $l | append (dict "name" "LinkedIn" "icon" "linkedin" "url" . "label" "Merve Üstünçelik İkbal") }}{{ end -}}
+{{- return $l -}}

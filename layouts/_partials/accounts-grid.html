@@ -1,0 +1,17 @@
+{{- $tr := eq site.Language.Lang "tr" -}}
+<div class="acc-grid">
+{{- range partial "accounts.html" . }}
+  <a class="acc" href="{{ .url }}" {{ if hasPrefix .url "http" }}target="_blank" rel="me noopener"{{ end }}>
+    <span class="acc-ico">{{ partial "icon.html" .icon }}</span>
+    <span class="acc-txt"><span class="acc-name mono">{{ .name }}</span><span class="acc-label">{{ if eq .icon "email" }}{{ replace .label "@" "<wbr>@" | safeHTML }}{{ else }}{{ .label }}{{ end }}</span></span>
+    <span class="acc-go" aria-hidden="true">↗</span>
+  </a>
+{{- end }}
+{{- with site.Params.book_url }}
+  <a class="acc acc-book" href="{{ . }}" target="_blank" rel="noopener">
+    <span class="acc-ico">{{ partial "icon.html" "book" }}</span>
+    <span class="acc-txt"><span class="acc-name mono">{{ if $tr }}Kitabım{{ else }}My book{{ end }}</span><span class="acc-label">Malzemelerin Dünyasında İki Yabancı</span></span>
+    <span class="acc-go" aria-hidden="true">↗</span>
+  </a>
+{{- end }}
+</div>
