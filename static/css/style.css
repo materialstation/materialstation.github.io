@@ -398,3 +398,5 @@ img { max-width: 100%; height: auto; }
 .book-cover img { max-width: 480px; transform: none; border-radius: 22px; box-shadow: 0 30px 60px -30px rgba(40, 25, 80, .45); }
 .book-cover:hover img { transform: none; }
 @media (max-width: 860px) { .book-cover img { max-width: 320px; transform: none; } }
+/* İletişim: e-posta kartı tam genişlik (ana iletişim kanalı) */
+.acc-email { grid-column: 1 / -1; }
