@@ -1,28 +1,42 @@
 ---
 title: "About"
 translationKey: "about"
+layout: "about"
+roles: ["Metallurgical & Materials Engineer", "Materials Scientist", "Popular Science Writer"]
+
+timeline_title: "Education and research"
+timeline:
+  - years: "2018 – 2021"
+    title: "M.Sc. · Materials Science and Nanotechnology"
+    place: "Bilkent University, National Nanotechnology Research Center (UNAM), Ankara"
+    badge: "Full scholarship"
+    text: "Thesis: the photocurrent generation mechanism in silver nanowires and the use of optical methods to study defects in glass. Fabrication and characterisation of nano-devices based on two-dimensional semiconductors."
+  - years: "2016"
+    title: "Erasmus+ Summer Research Internship"
+    place: "Plasma & Coatings Physics Group, Linköping University, Sweden"
+    text: "Thin-film coatings grown by PVD and HiPIMS to improve the performance of cutting tools."
+  - years: "2012 – 2017"
+    title: "B.Sc. · Metallurgical and Materials Engineering"
+    place: "Ankara Yıldırım Beyazıt University, Ankara"
+    badge: "Ranked 3rd in department"
+    text: "Thesis: fabrication of silicon nitride (Si₃N₄) bioceramics with graded porosity."
+
+areas_title: "What I work on"
+areas: ["Thin films and coatings", "Nanomaterials and nano-devices", "2D semiconductors", "Bioceramics", "Materials characterisation · SEM, XRD, AFM, Raman", "Science communication"]
+
+works_title: "Publications"
+works:
+  - kind: "Book"
+    title: "Malzemelerin Dünyasında İki Yabancı"
+    meta: "KDY Yayınları, 2023 · in Turkish"
+    url: "/en/my-book/"
+  - kind: "Article"
+    title: "Plasmon-Enhanced Photoresponse of a Single Silver Nanowire and its Networked Devices"
+    meta: "Nanoscale Horizons, 2022 · co-author"
+    url: "https://doi.org/10.1039/D1NH00629K"
+
+cv_note: "My work experience and full CV are on LinkedIn."
 ---
-I'm **Merve Ustuncelik Ikbal** (Merve Üstünçelik İkbal), a metallurgical and materials engineer with a master's degree in materials science and nanotechnology. *Materials Station* is where I write about the materials that shape our world — in English and Turkish. *(Add 2–3 sentences in your own words.)*
+I'm **Merve Üstünçelik İkbal** — a metallurgical and materials engineer, materials scientist and popular science writer. For years I grew thin films in the lab, built nano-devices and looked at materials through the microscope. Over time I realised that the stories materials tell are too beautiful to stay inside a laboratory.
 
-## Education
-
-- **M.Sc., Materials Science and Nanotechnology** — University name, year
-- **B.Sc., Metallurgical and Materials Engineering** — University name, year
-
-## Experience
-
-- **Job title** — Company, years. One line on what you did.
-
-## Book
-
-**Malzeme İstasyonu** — *(year, publisher; one sentence on what the book is about, and where to buy it)*
-
-## Areas of interest
-
-- Physical metallurgy and heat treatment
-- Nanomaterials and characterisation (SEM, TEM, XRD)
-- Failure analysis and material selection
-
-## Why this site
-
-I write about materials because… *(one or two sentences on your motivation)*
+*Materials Station* is where I blend my fascination with materials science with art and literature, and tell those stories in a language everyone can follow.

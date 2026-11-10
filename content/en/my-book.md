@@ -11,9 +11,9 @@ isbn: "978-975-44967-4-1"
 genre: "Popular science · Fiction"
 
 lead: |
-  A rainy autumn night in Ankara, a park bench and two strangers…
+  Life loves to cross the paths of strangers who need each other yet don't even know the other exists. This time, it gets help from materials…
 
-  Merih, a young science writer whose life is turned upside down by an orange parcel; Gülbeyaz, gruff on the outside and soft-hearted within; and Roy, a mysterious man with scarred hands who claims he can talk to materials. A story in which the pattern of a scarf becomes a crystal lattice and the cracks in a ceramic face become the burdens we carry — one that asks you to memorise no formulas, yet makes you look at the objects around you differently.
+  At a time when she is questioning the meaning of her life, Merih's path crosses with Roy, a mysterious man who claims he can talk to materials. A story in which the pattern of a scarf becomes a crystal lattice and the cracks in a ceramic face become the burdens we carry — one that asks you to memorise no formulas, yet makes you look at the objects around you differently.
 
 door: "book-door.jpg"
 illus: "By the author"
