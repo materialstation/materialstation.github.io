@@ -4,29 +4,34 @@
 <section class="hero">
   <div class="wrap hero-inner">
     <h1>{{ site.Params.brand }}</h1>
-    <p class="tagline">{{ $p.tagline }}</p>
+    {{ with $p.tagline }}<p class="tagline">{{ . }}</p>{{ end }}
     {{ with .Content }}<div class="hero-intro">{{ . }}</div>{{ end }}
   </div>
 </section>
 
 {{- $writings := where site.RegularPages "Section" "in" (slice "writings" "yazilar") }}
 {{- $cases := where site.RegularPages "Section" "in" (slice "case-studies" "vaka-analizleri") }}
-<div class="wrap home-grid">
-  <section>
-    <div class="section-head">
-      <h2>{{ T "latest_writings" }}</h2>
-      {{ with $writings }}{{ with (index . 0).Parent }}<a class="more" href="{{ .RelPermalink }}">{{ T "all_writings" }}</a>{{ end }}{{ end }}
-    </div>
-    {{ range first 4 $writings }}{{ partial "card.html" . }}{{ else }}<p class="empty">{{ T "nothing_yet" }}</p>{{ end }}
-  </section>
-  <section>
-    <div class="section-head">
-      <h2>{{ T "latest_cases" }}</h2>
-      {{ with $cases }}{{ with (index . 0).Parent }}<a class="more" href="{{ .RelPermalink }}">{{ T "all_cases" }}</a>{{ end }}{{ end }}
-    </div>
-    {{ range first 4 $cases }}{{ partial "card.html" . }}{{ else }}<p class="empty">{{ T "nothing_yet" }}</p>{{ end }}
-  </section>
-</div>
+{{- $n := 0 }}
+<section class="wrap home-block">
+  <div class="block-head">
+    <p class="lab-eyebrow mono"><span class="dot"></span>{{ if $tr }}Yazılar{{ else }}Writings{{ end }}</p>
+    <h2>{{ T "latest_writings" }}</h2>
+    {{ with $writings }}{{ with (index . 0).Parent }}<a class="more mono" href="{{ .RelPermalink }}">{{ T "all_writings" }}</a>{{ end }}{{ end }}
+  </div>
+  <div class="tiles">
+    {{ range $i, $p := first 4 $writings }}{{ partial "tile.html" (dict "page" $p "i" (add $i 1) "featured" (eq $i 0)) }}{{ else }}<p class="empty">{{ T "nothing_yet" }}</p>{{ end }}
+  </div>
+</section>
+<section class="wrap home-block">
+  <div class="block-head">
+    <p class="lab-eyebrow mono"><span class="dot"></span>{{ if $tr }}Vaka analizleri{{ else }}Case studies{{ end }}</p>
+    <h2>{{ T "latest_cases" }}</h2>
+    {{ with $cases }}{{ with (index . 0).Parent }}<a class="more mono" href="{{ .RelPermalink }}">{{ T "all_cases" }}</a>{{ end }}{{ end }}
+  </div>
+  <div class="tiles">
+    {{ range $i, $p := first 3 $cases }}{{ partial "tile.html" (dict "page" $p "i" (add $i 1) "featured" false) }}{{ else }}<p class="empty">{{ T "nothing_yet" }}</p>{{ end }}
+  </div>
+</section>
 
 <section class="wrap author" aria-labelledby="author-title">
   <div class="author-card">
