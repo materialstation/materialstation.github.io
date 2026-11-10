@@ -184,3 +184,85 @@ img { max-width: 100%; height: auto; }
   .author-card { gap: 0 18px; }
   .author-logo { width: 52px; height: 83px; }
 }
+
+/* ===== Yazılar: resimli kart ızgarası ===== */
+.lab-head {
+  position: relative; border-bottom: 1px solid var(--line); overflow: hidden;
+  background:
+    radial-gradient(ellipse 60% 90% at 85% 0%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 70%),
+    var(--surface);
+}
+.lab-head::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .55;
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: linear-gradient(100deg, transparent 30%, #000 95%);
+  -webkit-mask-image: linear-gradient(100deg, transparent 30%, #000 95%);
+}
+.lab-head .wrap { position: relative; padding-top: 56px; padding-bottom: 40px; }
+.lab-head h1 { font-size: clamp(36px, 6vw, 60px); line-height: 1.05; letter-spacing: -1px; margin: 0 0 14px; }
+.lab-head .lead { max-width: 52ch; font: 19px/1.55 var(--sans); }
+.lab-eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 18px; font-size: 12.5px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); }
+.lab-eyebrow .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--logo-atom, var(--accent)); box-shadow: 0 0 0 4px color-mix(in srgb, var(--logo-atom, var(--accent)) 22%, transparent); }
+.lab-count { margin: 22px 0 0; font-size: 12.5px; letter-spacing: 1px; color: var(--muted); text-transform: uppercase; }
+
+.tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; padding-top: 40px; padding-bottom: 72px; }
+.tile {
+  position: relative; display: flex; flex-direction: column; min-width: 0;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 16px; overflow: hidden;
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.tile:hover {
+  transform: translateY(-4px); border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+  box-shadow: 0 18px 40px -18px color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.tile-media { position: relative; display: block; aspect-ratio: 16 / 10; overflow: hidden; background: var(--accent-soft); }
+.tile-media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
+.tile:hover .tile-media img { transform: scale(1.05); }
+.tile-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(10, 8, 20, .35)); pointer-events: none; }
+.tile-blank {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 50% 50%, var(--accent) 0 3px, transparent 4px) 0 0 / 28px 28px,
+    linear-gradient(135deg, var(--accent-soft), color-mix(in srgb, var(--accent) 30%, var(--accent-soft)));
+  opacity: .8;
+}
+.tile-no {
+  position: absolute; top: 12px; left: 12px; z-index: 1; font-size: 12px; letter-spacing: 1px; color: #fff;
+  background: rgba(20, 16, 36, .55); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, .25); border-radius: 999px; padding: 3px 10px;
+}
+.tile-body { display: flex; flex-direction: column; gap: 10px; padding: 18px 20px 20px; flex: 1; }
+.tile-meta { display: flex; gap: 8px 14px; flex-wrap: wrap; margin: 0; font-size: 12px; letter-spacing: .6px; text-transform: uppercase; color: var(--muted); }
+.tile-meta span::before { content: "·"; margin-right: 14px; color: var(--line); }
+.tile h3 { margin: 0; font-size: 21px; line-height: 1.25; letter-spacing: -.2px; }
+.tile h3 a { color: var(--ink); text-decoration: none; }
+.tile h3 a::after { content: ""; position: absolute; inset: 0; z-index: 0; }   /* tüm kart tıklanır */
+.tile:hover h3 a { color: var(--accent); }
+.tile-sum { margin: 0; color: var(--muted); font: 15.5px/1.55 var(--sans); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.tile-tags { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 0; }
+.tile-tags a { font-size: 11.5px; text-decoration: none; color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--line)); padding: 2px 9px; border-radius: 999px; }
+.tile-tags a:hover { background: var(--accent); color: var(--surface); }
+.tile-go { margin-top: auto; padding-top: 6px; font-size: 12.5px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink); }
+.tile-go b { display: inline-block; color: var(--accent); transition: transform .25s ease; }
+.tile:hover .tile-go b { transform: translateX(5px); }
+
+/* İlk (en yeni) yazı geniş */
+.tile-feat { grid-column: 1 / -1; flex-direction: row; }
+.tile-feat .tile-media { flex: 0 0 58%; aspect-ratio: auto; min-height: 340px; }
+.tile-feat .tile-body { padding: 32px 34px; justify-content: center; gap: 14px; }
+.tile-feat h3 { font-size: clamp(26px, 3vw, 34px); line-height: 1.15; letter-spacing: -.5px; }
+.tile-feat .tile-sum { font-size: 17px; -webkit-line-clamp: 4; }
+.tile-feat .tile-go { margin-top: 8px; }
+
+@media (max-width: 960px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; } }
+@media (max-width: 760px) {
+  .lab-head .wrap { padding-top: 40px; padding-bottom: 30px; }
+  .tiles { grid-template-columns: 1fr; gap: 18px; padding-top: 28px; }
+  .tile-feat { flex-direction: column; }
+  .tile-feat .tile-media { flex: none; aspect-ratio: 16 / 10; min-height: 0; }
+  .tile-feat .tile-body { padding: 18px 20px 20px; }
+  .tile-feat h3 { font-size: 24px; }
+}
