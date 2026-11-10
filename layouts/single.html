@@ -24,4 +24,17 @@
   {{ partial "comments.html" . }}
   {{ end }}
 </article>
+{{ if $isPost }}
+{{- $others := first 3 (where (where site.RegularPages "Section" .Section) "Permalink" "ne" .Permalink) }}
+{{ with $others }}
+<section class="wrap home-block more-posts">
+  <div class="block-head">
+    <p class="lab-eyebrow mono"><span class="dot"></span>{{ if eq site.Language.Lang "tr" }}Okumaya devam et{{ else }}Keep reading{{ end }}</p>
+    <h2>{{ if eq site.Language.Lang "tr" }}Diğer yazılar{{ else }}More to read{{ end }}</h2>
+    {{ with $.Parent }}<a class="more mono" href="{{ .RelPermalink }}">{{ T "all_writings" }}</a>{{ end }}
+  </div>
+  <div class="tiles">{{ range $i, $p := . }}{{ partial "tile.html" (dict "page" $p "i" (add $i 1) "featured" false) }}{{ end }}</div>
+</section>
+{{ end }}
+{{ end }}
 {{ end }}
