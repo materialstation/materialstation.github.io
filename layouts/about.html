@@ -1,0 +1,60 @@
+{{ define "main" }}
+{{- $tr := eq site.Language.Lang "tr" }}
+<section class="lab-head about-hero">
+  <div class="wrap about-grid">
+    <svg class="about-logo" viewBox="0 0 100 160" aria-hidden="true">
+      <path class="lg-body" d="M19 92 C19 83 26 79 35 79 L65 79 C74 79 81 83 81 92 C79 113 65 136 50 158 C35 136 21 113 19 92 Z"/>
+      <path class="lg-dia" d="M50 13 L75.5 38.5 L50 64 L24.5 38.5 Z"/>
+      <g class="lg-atom"><circle cx="50" cy="10.5" r="8.2"/><circle cx="78" cy="38.5" r="8.2"/><circle cx="50" cy="66.5" r="8.2"/><circle cx="22" cy="38.5" r="8.2"/><circle class="lg-core" cx="50" cy="38.5" r="5.4"/></g>
+    </svg>
+    <div>
+      <p class="lab-eyebrow mono"><span class="dot"></span>{{ .Title }}</p>
+      <h1>{{ site.Params.author }}</h1>
+      {{ with .Params.roles }}<p class="about-roles mono">{{ range $i, $r := . }}{{ if $i }}<span class="sep">/</span>{{ end }}<span>{{ $r }}</span>{{ end }}</p>{{ end }}
+      <div class="about-intro">{{ .Content }}</div>
+    </div>
+  </div>
+</section>
+
+{{ with .Params.timeline }}
+<section class="wrap book-sec">
+  <div class="block-head"><p class="lab-eyebrow mono"><span class="dot"></span>01</p><h2>{{ $.Params.timeline_title }}</h2></div>
+  <ol class="tl">
+    {{ range . }}
+    <li class="tl-item">
+      <span class="tl-years mono">{{ .years }}</span>
+      <div class="tl-card">
+        <h3>{{ .title }}</h3>
+        <p class="tl-place">{{ .place }}{{ with .badge }} <span class="tl-badge mono">{{ . }}</span>{{ end }}</p>
+        {{ with .text }}<p class="tl-text">{{ . }}</p>{{ end }}
+      </div>
+    </li>
+    {{ end }}
+  </ol>
+</section>
+{{ end }}
+
+{{ with .Params.areas }}
+<section class="wrap book-sec">
+  <div class="block-head"><p class="lab-eyebrow mono"><span class="dot"></span>02</p><h2>{{ $.Params.areas_title }}</h2></div>
+  <ul class="book-topics mono about-areas">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+</section>
+{{ end }}
+
+{{ with .Params.works }}
+<section class="wrap book-sec about-last">
+  <div class="block-head"><p class="lab-eyebrow mono"><span class="dot"></span>03</p><h2>{{ $.Params.works_title }}</h2></div>
+  <div class="works">
+    {{ range . }}
+    <a class="work" href="{{ .url }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener"{{ end }}>
+      <span class="work-kind mono">{{ .kind }}</span>
+      <span class="work-title">{{ .title }}</span>
+      <span class="work-meta mono">{{ .meta }}</span>
+      <span class="acc-go" aria-hidden="true">↗</span>
+    </a>
+    {{ end }}
+  </div>
+  {{ with site.Params.linkedin }}<p class="cv-note">{{ $.Params.cv_note }} <a class="btn btn-ghost" href="{{ . }}" target="_blank" rel="noopener">LinkedIn <b>↗</b></a></p>{{ end }}
+</section>
+{{ end }}
+{{ end }}
