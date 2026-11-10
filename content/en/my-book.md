@@ -13,15 +13,10 @@ genre: "Popular science · Fiction"
 lead: |
   A rainy autumn night in Ankara, a park bench and two strangers…
 
-  Merih is a young science writer whose life is turned upside down by an orange parcel left at her door one morning. Gülbeyaz lives alone with her dogs, her old records and her night walks — gruff on the outside, soft-hearted within. Their paths cross that night. Soon a mysterious man joins the story, his hands covered in scars, claiming he can talk to materials: Roy.
+  Merih, a young science writer whose life is turned upside down by an orange parcel; Gülbeyaz, gruff on the outside and soft-hearted within; and Roy, a mysterious man with scarred hands who claims he can talk to materials. A story in which the pattern of a scarf becomes a crystal lattice and the cracks in a ceramic face become the burdens we carry — one that asks you to memorise no formulas, yet makes you look at the objects around you differently.
 
-different_title: "What makes this book different"
-different: |
-  In *Two Strangers in the World of Materials*, science sits at the very heart of the story. The zigzag pattern of a scarf becomes a crystal lattice; a steel pipe becomes a person's breaking point. The cracks in a ceramic face speak of the burdens we carry, a snowflake of how unique each of us is. And then there is an ordinary metal wire that changes shape in a hot glass of tea…
-
-  A story that asks you to memorise no formulas, yet leaves you looking at the objects around you differently once you close it. All drawings in the book, and the electron microscope image of silver nanowires, are by the author.
-
-topics: ["Crystal lattices", "Stress–strain", "The hexagonal structure of ice", "Shape-memory alloys", "Ceramics", "The nanoscale"]
+door: "book-door.jpg"
+illus: "By the author"
 
 quotes_title: "From the book"
 quotes:
