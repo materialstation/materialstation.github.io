@@ -266,3 +266,30 @@ img { max-width: 100%; height: auto; }
   .tile-feat .tile-body { padding: 18px 20px 20px; }
   .tile-feat h3 { font-size: 24px; }
 }
+
+/* ===== Ana sayfa ve yazı sonu: resimli bloklar ===== */
+.home-block { padding-top: 56px; }
+.home-block + .home-block { padding-top: 24px; }
+.home-block .tiles { padding-top: 22px; padding-bottom: 24px; }
+.block-head { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 0 16px; border-bottom: 1px solid var(--line); padding-bottom: 14px; }
+.block-head .lab-eyebrow { grid-column: 1 / -1; margin-bottom: 10px; }
+.block-head h2 { margin: 0; font-size: clamp(26px, 3.4vw, 34px); letter-spacing: -.5px; line-height: 1.1; }
+.block-head .more { font-size: 13px; letter-spacing: .8px; text-transform: uppercase; text-decoration: none; }
+.author { padding-top: 40px; }
+.more-posts { padding-top: 8px; padding-bottom: 40px; }
+.tile-blank { display: grid; place-items: center; background:
+    linear-gradient(var(--line) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 0 / 24px 24px,
+    radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--accent) 28%, var(--accent-soft)), var(--accent-soft) 70%);
+  opacity: 1; }
+.tile-blank svg { width: 30%; max-width: 120px; filter: drop-shadow(0 8px 24px color-mix(in srgb, var(--accent) 45%, transparent)); }
+.tile-blank .lg-atom circle { stroke: var(--accent-soft); }
+@media (max-width: 760px) { .home-block { padding-top: 36px; } .block-head .more { grid-column: 1 / -1; margin-top: 8px; } }
+/* Ana sayfa başlığına da laboratuvar ızgarası */
+.hero { position: relative; overflow: hidden;
+  background: radial-gradient(ellipse 60% 90% at 85% 0%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 70%), var(--surface); }
+.hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .55;
+  background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: linear-gradient(100deg, transparent 30%, #000 95%); -webkit-mask-image: linear-gradient(100deg, transparent 30%, #000 95%); }
+.hero-inner { position: relative; }
