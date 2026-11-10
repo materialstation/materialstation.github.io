@@ -1,53 +1,127 @@
 {{ define "main" }}
 {{- $p := site.Language.Params }}
 {{- $tr := eq site.Language.Lang "tr" }}
-<section class="hero">
-  <div class="wrap hero-inner">
-    <h1>{{ site.Params.brand }}</h1>
-    {{ with $p.tagline }}<p class="tagline">{{ . }}</p>{{ end }}
-    {{ with .Content }}<div class="hero-intro">{{ . }}</div>{{ end }}
-  </div>
-</section>
-
 {{- $writings := where site.RegularPages "Section" "in" (slice "writings" "yazilar") }}
 {{- $cases := where site.RegularPages "Section" "in" (slice "case-studies" "vaka-analizleri") }}
-{{- $n := 0 }}
-<section class="wrap home-block">
-  <div class="block-head">
-    <p class="lab-eyebrow mono"><span class="dot"></span>{{ if $tr }}Yazılar{{ else }}Writings{{ end }}</p>
-    <h2>{{ T "latest_writings" }}</h2>
-    {{ with $writings }}{{ with (index . 0).Parent }}<a class="more mono" href="{{ .RelPermalink }}">{{ T "all_writings" }}</a>{{ end }}{{ end }}
+{{- $wsec := site.GetPage (cond $tr "/yazilar" "/writings") }}
+{{- $book := site.GetPage (cond $tr "/kitabim" "/my-book") }}
+{{- $about := site.GetPage (cond $tr "/hakkimda" "/about") }}
+
+<div class="stage">
+<section class="intro" aria-label="{{ site.Params.brand }}">
+  <svg class="lattice-bg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1200 800">
+    <defs>
+      <pattern id="lat" width="80" height="80" patternUnits="userSpaceOnUse">
+        <path d="M0 40 H80 M40 0 V80" class="lb-bond"/>
+        <circle cx="40" cy="40" r="3.2" class="lb-atom"/>
+      </pattern>
+      <radialGradient id="latfade" cx="70%" cy="40%" r="65%"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+      <mask id="latmask"><rect width="1200" height="800" fill="url(#latfade)"/></mask>
+    </defs>
+    <g mask="url(#latmask)"><rect class="lb-drift" x="-80" y="-80" width="1360" height="960" fill="url(#lat)"/></g>
+    <g class="lb-glow">
+      <circle cx="760" cy="200" r="5"/><circle cx="1000" cy="360" r="5"/><circle cx="840" cy="520" r="5"/><circle cx="600" cy="120" r="5"/><circle cx="1080" cy="600" r="5"/>
+    </g>
+  </svg>
+  <div class="wrap intro-inner">
+    <div class="intro-text">
+      <p class="lab-eyebrow mono reveal"><span class="dot"></span>{{ if $tr }}Popüler bilim · Malzeme bilimi{{ else }}Popular science · Materials science{{ end }}</p>
+      {{- $bw := split site.Params.brand " " }}
+      <h1 class="intro-title reveal">{{ index $bw 0 }}<br><span class="grad">{{ delimit (after 1 $bw) " " }}</span></h1>
+      {{ with $wsec }}{{ with .Content }}<div class="intro-sub reveal">{{ . }}</div>{{ end }}{{ end }}
+      <div class="intro-actions reveal">
+        {{ with $wsec }}<a class="btn" href="{{ .RelPermalink }}">{{ if $tr }}Yazıları keşfet{{ else }}Explore the writing{{ end }} <b>→</b></a>{{ end }}
+        {{ with $book }}<a class="btn btn-ghost" href="{{ .RelPermalink }}">{{ .Title }} <b>→</b></a>{{ end }}
+      </div>
+    </div>
+    <svg class="intro-logo" viewBox="11 -1 78 78" aria-hidden="true">
+      <path class="lg-dia" d="M50 13 L75.5 38.5 L50 64 L24.5 38.5 Z"/>
+      <g class="lg-atom"><circle class="a1" cx="50" cy="10.5" r="8.2"/><circle class="a2" cx="78" cy="38.5" r="8.2"/><circle class="a3" cx="50" cy="66.5" r="8.2"/><circle class="a4" cx="22" cy="38.5" r="8.2"/><circle class="lg-core" cx="50" cy="38.5" r="5.4"/></g>
+    </svg>
   </div>
-  <div class="tiles">
-    {{ range $i, $p := first 4 $writings }}{{ partial "tile.html" (dict "page" $p "i" (add $i 1) "featured" (eq $i 0)) }}{{ else }}<p class="empty">{{ T "nothing_yet" }}</p>{{ end }}
-  </div>
-</section>
-<section class="wrap home-block">
-  <div class="block-head">
-    <p class="lab-eyebrow mono"><span class="dot"></span>{{ if $tr }}Vaka analizleri{{ else }}Case studies{{ end }}</p>
-    <h2>{{ T "latest_cases" }}</h2>
-    {{ with $cases }}{{ with (index . 0).Parent }}<a class="more mono" href="{{ .RelPermalink }}">{{ T "all_cases" }}</a>{{ end }}{{ end }}
-  </div>
-  <div class="tiles">
-    {{ range $i, $p := first 3 $cases }}{{ partial "tile.html" (dict "page" $p "i" (add $i 1) "featured" false) }}{{ else }}<p class="empty">{{ T "nothing_yet" }}</p>{{ end }}
-  </div>
+  <div class="marquee mono" aria-hidden="true"><div class="marquee-track">
+    {{- $words := cond $tr (slice "Kristal kafes" "Nitinol" "Seramik" "Kevlar" "2B polimer" "Gümüş nanotel" "5D kuvars" "Termal tuğla" "Kauçuk" "Çimento pil") (slice "Crystal lattice" "Nitinol" "Ceramics" "Kevlar" "2D polymer" "Silver nanowire" "5D quartz" "Thermal tiles" "Rubber" "Cement battery") }}
+    {{- range seq 2 }}{{ range $words }}<span>{{ . }}</span><i>◆</i>{{ end }}{{ end }}
+  </div></div>
+  <a class="scroll-cue mono" href="#katman-1">{{ if $tr }}Kaydır{{ else }}Scroll{{ end }} <span>↓</span></a>
 </section>
 
-<section class="wrap author" aria-labelledby="author-title">
-  <div class="author-card">
-    <svg class="author-logo" viewBox="0 0 100 160" aria-hidden="true">
-      <path class="lg-body" d="M19 92 C19 83 26 79 35 79 L65 79 C74 79 81 83 81 92 C79 113 65 136 50 158 C35 136 21 113 19 92 Z"/>
-      <path class="lg-dia" d="M50 13 L75.5 38.5 L50 64 L24.5 38.5 Z"/>
-      <g class="lg-atom"><circle cx="50" cy="10.5" r="8.2"/><circle cx="78" cy="38.5" r="8.2"/><circle cx="50" cy="66.5" r="8.2"/><circle cx="22" cy="38.5" r="8.2"/><circle class="lg-core" cx="50" cy="38.5" r="5.4"/></g>
-    </svg>
-    <div class="author-info">
-      <p class="eyebrow mono" id="author-title">{{ if $tr }}Yazar hakkında{{ else }}About the author{{ end }}</p>
-      <p class="byline">{{ site.Params.author }}</p>
-      <p class="degree">{{ $p.role }} · {{ $p.degree }}</p>
-      {{ with site.Params.book }}<p class="book">📖 {{ with site.Params.book_url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ . | safeHTML }}{{ with site.Params.book_url }}</a>{{ end }}</p>{{ end }}
-      {{ with site.GetPage (cond $tr "/hakkimda" "/about") }}<a class="more" href="{{ .RelPermalink }}">{{ if $tr }}Hakkımda daha fazlası →{{ else }}More about me →{{ end }}</a>{{ end }}
+<div class="sheet" id="katman-1">
+  <section class="wrap home-block">
+    <div class="block-head reveal">
+      <p class="lab-eyebrow mono"><span class="dot"></span>01 · {{ if $tr }}Yazılar{{ else }}Writings{{ end }}</p>
+      <h2>{{ T "latest_writings" }}</h2>
+      {{ with $wsec }}<a class="more mono" href="{{ .RelPermalink }}">{{ T "all_writings" }}</a>{{ end }}
     </div>
-  </div>
-</section>
-{{ with site.Params.buttondown_username }}<div class="wrap home-subscribe">{{ partial "subscribe.html" $ }}</div>{{ end }}
+    <div class="tiles">
+      {{ range $i, $pg := first 4 $writings }}<div class="reveal{{ if eq $i 0 }} span-all{{ end }}">{{ partial "tile.html" (dict "page" $pg "i" (add $i 1) "featured" (eq $i 0)) }}</div>{{ else }}<p class="empty">{{ T "nothing_yet" }}</p>{{ end }}
+    </div>
+  </section>
+
+  {{ with $cases }}
+  <section class="wrap home-block">
+    <div class="block-head reveal">
+      <p class="lab-eyebrow mono"><span class="dot"></span>{{ if $tr }}Vaka analizleri{{ else }}Case studies{{ end }}</p>
+      <h2>{{ T "latest_cases" }}</h2>
+    </div>
+    <div class="tiles">{{ range $i, $pg := first 3 . }}<div class="reveal">{{ partial "tile.html" (dict "page" $pg "i" (add $i 1) "featured" false) }}</div>{{ end }}</div>
+  </section>
+  {{ end }}
+
+  {{ with $book }}
+  {{- $cv := "" }}{{ with site.Home.Resources.Get $book.Params.cover }}{{ $cv = (.Resize "700x webp q85").RelPermalink }}{{ end }}
+  <section class="wrap home-band-wrap">
+    <div class="home-band reveal">
+      <div class="band-text">
+        <p class="lab-eyebrow mono"><span class="dot"></span>02 · {{ .Title }}</p>
+        <h2>{{ .Params.book_title }}</h2>
+        {{ with .Params.lead }}<div class="band-lead">{{ . | markdownify }}</div>{{ end }}
+        <div class="intro-actions">
+          <a class="btn btn-light" href="{{ .RelPermalink }}">{{ if $tr }}Kitabı tanı{{ else }}Discover the book{{ end }} <b>→</b></a>
+          {{ with site.Params.book_url }}<a class="btn btn-line" href="{{ . }}" target="_blank" rel="noopener">{{ if $tr }}Satın al{{ else }}Buy{{ end }} <b>↗</b></a>{{ end }}
+        </div>
+      </div>
+      {{ with $cv }}<div class="band-img"><img src="{{ . }}" alt="" loading="lazy"></div>{{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  <section class="wrap home-block home-author">
+    <div class="block-head reveal">
+      <p class="lab-eyebrow mono"><span class="dot"></span>03 · {{ if $tr }}Yazar{{ else }}Author{{ end }}</p>
+      <h2>{{ site.Params.author }}</h2>
+    </div>
+    <div class="author-row reveal">
+      <svg class="author-logo" viewBox="0 0 100 160" aria-hidden="true">
+        <path class="lg-body" d="M19 92 C19 83 26 79 35 79 L65 79 C74 79 81 83 81 92 C79 113 65 136 50 158 C35 136 21 113 19 92 Z"/>
+        <path class="lg-dia" d="M50 13 L75.5 38.5 L50 64 L24.5 38.5 Z"/>
+        <g class="lg-atom"><circle cx="50" cy="10.5" r="8.2"/><circle cx="78" cy="38.5" r="8.2"/><circle cx="50" cy="66.5" r="8.2"/><circle cx="22" cy="38.5" r="8.2"/><circle class="lg-core" cx="50" cy="38.5" r="5.4"/></g>
+      </svg>
+      <div>
+        {{ with $about }}{{ with .Params.roles }}<p class="about-roles mono">{{ range $i, $r := . }}{{ if $i }}<span class="sep">/</span>{{ end }}<span>{{ $r }}</span>{{ end }}</p>{{ end }}
+        <div class="author-intro">{{ .Content }}</div>
+        <a class="btn btn-ghost" href="{{ .RelPermalink }}">{{ if $tr }}Hakkımda{{ else }}About me{{ end }} <b>→</b></a>{{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap home-block home-follow">
+    <div class="block-head reveal">
+      <p class="lab-eyebrow mono"><span class="dot"></span>04 · {{ if $tr }}Takip et{{ else }}Follow{{ end }}</p>
+      <h2>{{ if $tr }}İstasyonda kalın{{ else }}Stay at the station{{ end }}</h2>
+    </div>
+    <div class="reveal">{{ partial "accounts-grid.html" . }}</div>
+  </section>
+  {{ with site.Params.buttondown_username }}<div class="wrap home-subscribe">{{ partial "subscribe.html" $ }}</div>{{ end }}
+</div>
+</div>
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
 {{ end }}
