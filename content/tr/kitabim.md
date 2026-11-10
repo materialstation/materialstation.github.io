@@ -12,15 +12,10 @@ genre: "Popüler bilim · Öykü"
 lead: |
   Ankara'da yağmurlu bir sonbahar gecesi, bir park bankı ve iki yabancı…
 
-  Merih, bir sabah kapısına gelen turuncu bir paketle hayatı altüst olmuş genç bir bilim yazarıdır. Gülbeyaz ise köpekleri, eski plakları ve gece yürüyüşleriyle yalnız yaşayan, dışarıdan huysuz ama yufka yürekli bir kadın. Yolları o gece kesişir. Kısa süre sonra hikâyeye elleri yara izleriyle dolu, malzemelerle konuştuğunu söyleyen gizemli bir adam katılır: Roy.
+  Hayatı turuncu bir paketle altüst olan genç bilim yazarı Merih, dışarıdan huysuz ama yufka yürekli Gülbeyaz ve elleri yara izleriyle dolu, malzemelerle konuştuğunu söyleyen gizemli Roy. Bir atkının motifinin kristal kafese, seramik bir yüzdeki çatlakların insanın taşıdığı yüklere dönüştüğü; formül ezberletmeden etrafınızdaki nesnelere başka gözle baktıran bir öykü.
 
-different_title: "Bu kitabı farklı kılan"
-different: |
-  *Malzemelerin Dünyasında İki Yabancı*'da bilim, hikâyenin tam ortasında durur. Bir atkının zikzak motifi kristal kafese, bir çelik boru insanın kırılma noktasına dönüşür. Seramikten bir yüzdeki çatlaklar taşıdığımız yükleri, bir kar tanesi her insanın biricikliğini anlatır. Bir de sıcak bir bardak çayla şekil değiştiren sıradan bir metal tel var…
-
-  Formül ezberletmeyen, ama kapattığınızda etrafınızdaki nesnelere başka gözle bakmanızı sağlayan bir öykü. Kitaptaki bütün çizimler ve gümüş nanotellerin elektron mikroskobu görüntüsü yazara aittir.
-
-topics: ["Kristal kafes", "Gerilim–gerinim", "Buzun altıgen yapısı", "Şekil hafızalı alaşımlar", "Seramikler", "Nano boyut"]
+door: "kitap-kapi.jpg"
+illus: "Yazara ait"
 
 quotes_title: "Kitaptan"
 quotes:
