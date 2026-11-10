@@ -400,3 +400,8 @@ img { max-width: 100%; height: auto; }
 @media (max-width: 860px) { .book-cover img { max-width: 320px; transform: none; } }
 /* İletişim: e-posta kartı tam genişlik (ana iletişim kanalı) */
 .acc-email { grid-column: 1 / -1; }
+/* Davet: metin + kapı görseli */
+.book-invite.has-door { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 400px); gap: 40px; align-items: center; }
+.invite-door img { width: 100%; height: auto; display: block; border-radius: 18px; box-shadow: 0 26px 50px -26px rgba(40, 25, 80, .55); }
+@media (max-width: 860px) { .book-invite.has-door { grid-template-columns: 1fr; gap: 26px; } .invite-door { order: -1; max-width: 320px; } }
+.book-specs { grid-template-columns: repeat(3, max-content); gap: 12px 40px; } @media (max-width: 600px) { .book-specs { grid-template-columns: repeat(2, max-content); } }
