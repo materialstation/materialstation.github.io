@@ -20,34 +20,29 @@
         {{ with .Params.publisher }}<div><dt>{{ if $tr }}Yayınevi{{ else }}Publisher{{ end }}</dt><dd>{{ . }}</dd></div>{{ end }}
         {{ with .Params.genre }}<div><dt>{{ if $tr }}Tür{{ else }}Genre{{ end }}</dt><dd>{{ . }}</dd></div>{{ end }}
         {{ with .Params.pages }}<div><dt>{{ if $tr }}Sayfa{{ else }}Length{{ end }}</dt><dd>{{ . }}</dd></div>{{ end }}
+        {{ with .Params.illus }}<div><dt>{{ if $tr }}Çizimler{{ else }}Illustrations{{ end }}</dt><dd>{{ . }}</dd></div>{{ end }}
         {{ with .Params.isbn }}<div><dt>ISBN</dt><dd>{{ . }}</dd></div>{{ end }}
       </dl>
     </div>
   </div>
 </section>
 
-{{ with .Params.different }}
-<section class="wrap book-sec">
-  <div class="block-head"><p class="lab-eyebrow mono"><span class="dot"></span>01</p><h2>{{ $.Params.different_title }}</h2></div>
-  <div class="book-two">
-    <div class="book-text">{{ . | markdownify }}</div>
-    {{ with $.Params.topics }}<ul class="book-topics mono">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
-  </div>
-</section>
-{{ end }}
-
 {{ with .Params.quotes }}
 <section class="wrap book-sec">
-  <div class="block-head"><p class="lab-eyebrow mono"><span class="dot"></span>02</p><h2>{{ $.Params.quotes_title }}</h2></div>
+  <div class="block-head"><p class="lab-eyebrow mono"><span class="dot"></span>01</p><h2>{{ $.Params.quotes_title }}</h2></div>
   <div class="quote-grid">{{ range . }}<blockquote class="qcard"><span class="qmark" aria-hidden="true">“</span><p>{{ . }}</p></blockquote>{{ end }}</div>
 </section>
 {{ end }}
 
+{{- $door := "" }}{{ with .Parent }}{{ with .Resources.Get $.Params.door }}{{ $door = (.Resize "640x webp q85").RelPermalink }}{{ end }}{{ end }}
 <section class="wrap book-sec book-invite-wrap">
-  <div class="book-invite">
-    <p class="lab-eyebrow mono"><span class="dot"></span>03 · {{ .Params.invite_title }}</p>
-    <div class="book-blurb">{{ .Content }}</div>
-    {{ with site.Params.book_url }}<a class="btn" href="{{ . }}" target="_blank" rel="noopener">{{ if $tr }}Kapıyı aç: kitabı edin{{ else }}Open the door: get the book{{ end }} <b>↗</b></a>{{ end }}
+  <div class="book-invite{{ if $door }} has-door{{ end }}">
+    <div class="invite-text">
+      <p class="lab-eyebrow mono"><span class="dot"></span>02 · {{ .Params.invite_title }}</p>
+      <div class="book-blurb">{{ .Content }}</div>
+      {{ with site.Params.book_url }}<a class="btn" href="{{ . }}" target="_blank" rel="noopener">{{ if $tr }}Kapıyı aç: kitabı edin{{ else }}Open the door: get the book{{ end }} <b>↗</b></a>{{ end }}
+    </div>
+    {{ with $door }}<div class="invite-door"><img src="{{ . }}" alt="" loading="lazy" width="640" height="640"></div>{{ end }}
   </div>
 </section>
 {{ end }}
