@@ -44,7 +44,7 @@
       <p class="eyebrow mono" id="author-title">{{ if $tr }}Yazar hakkında{{ else }}About the author{{ end }}</p>
       <p class="byline">{{ site.Params.author }}</p>
       <p class="degree">{{ $p.role }} · {{ $p.degree }}</p>
-      {{ with site.Params.book }}<p class="book">📖 {{ . | safeHTML }}</p>{{ end }}
+      {{ with site.Params.book }}<p class="book">📖 {{ with site.Params.book_url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ . | safeHTML }}{{ with site.Params.book_url }}</a>{{ end }}</p>{{ end }}
       {{ with site.GetPage (cond $tr "/hakkimda" "/about") }}<a class="more" href="{{ .RelPermalink }}">{{ if $tr }}Hakkımda daha fazlası →{{ else }}More about me →{{ end }}</a>{{ end }}
     </div>
   </div>

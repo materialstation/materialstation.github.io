@@ -15,7 +15,7 @@
     <p class="translation">{{ T "also_in" }}: {{ range . }}<a href="{{ .RelPermalink }}" hreflang="{{ .Language.Lang }}">{{ .Language.Label }}</a>{{ end }}</p>
     {{ end }}
   </header>
-  <div class="prose">{{ .Content }}</div>
+  <div class="prose">{{ .Content }}{{ if .Params.hesaplar }}{{ partial "accounts-grid.html" . }}{{ end }}</div>
   {{ with .GetTerms "tags" }}
   <footer class="post-foot"><span class="mono">{{ T "tags" }}:</span> <span class="tags">{{ range . }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}</span></footer>
   {{ end }}
