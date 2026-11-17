@@ -1,11 +1,12 @@
 {{- $p := .page }}{{ $i := .i }}{{ $feat := .featured }}
 {{- $img := partial "thumb.html" $p }}
 {{- $tr := eq site.Language.Lang "tr" }}
-<article class="tile{{ if $feat }} tile-feat{{ end }}">
+<article class="tile{{ if $feat }} tile-feat{{ end }}" data-lang="{{ $p.Language.Lang }}">
   <a class="tile-media{{ if eq $p.Params.image_fit "contain" }} fit-contain{{ end }}" href="{{ $p.RelPermalink }}" tabindex="-1" aria-hidden="true">
     {{- if $img }}<img src="{{ $img }}" alt="" loading="{{ if $feat }}eager{{ else }}lazy{{ end }}">
     {{- else }}<span class="tile-blank"><svg viewBox="11 -1 78 78" aria-hidden="true"><path class="lg-dia" d="M50 13 L75.5 38.5 L50 64 L24.5 38.5 Z"/><g class="lg-atom"><circle cx="50" cy="10.5" r="8.2"/><circle cx="78" cy="38.5" r="8.2"/><circle cx="50" cy="66.5" r="8.2"/><circle cx="22" cy="38.5" r="8.2"/><circle class="lg-core" cx="50" cy="38.5" r="5.4"/></g></svg></span>{{ end }}
     <span class="tile-no mono">{{ printf "%02d" $i }}</span>
+    <span class="tile-lang mono">{{ upper $p.Language.Lang }}</span>
   </a>
   <div class="tile-body">
     <p class="tile-meta mono">
@@ -15,6 +16,6 @@
     <h3><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h3>
     <p class="tile-sum">{{ with $p.Description }}{{ . }}{{ else }}{{ $p.Summary | plainify | truncate 160 }}{{ end }}</p>
     {{ with $p.GetTerms "tags" }}<p class="tile-tags mono">{{ range first 3 . }}<a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>{{ end }}</p>{{ end }}
-    <span class="tile-go mono" aria-hidden="true">{{ if $tr }}Oku{{ else }}Read{{ end }} <b>→</b></span>
+    <span class="tile-go mono" aria-hidden="true">{{ if eq $p.Language.Lang "tr" }}Oku{{ else }}Read{{ end }} <b>→</b></span>
   </div>
 </article>

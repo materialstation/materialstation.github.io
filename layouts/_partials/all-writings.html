@@ -1,0 +1,6 @@
+{{- /* Her iki dildeki yazıları birleştirir, yeniden eskiye sıralar */ -}}
+{{- $all := slice -}}
+{{- range hugo.Sites -}}
+  {{- range where .RegularPages "Section" "in" (slice "writings" "yazilar") -}}{{- $all = $all | append . -}}{{- end -}}
+{{- end -}}
+{{- return (sort $all "Date" "desc") -}}
