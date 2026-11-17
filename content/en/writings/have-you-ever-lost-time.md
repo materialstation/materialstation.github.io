@@ -1,5 +1,5 @@
 ---
-title: "Have You Ever Lost Time?"
+title: "Have You Ever Lost Track of Time?"
 date: 2021-11-30
 description: "Advice from Maya Angelou"
 tags: ["optical microscopy", "lab notes", "Maya Angelou", "books", "time"]
