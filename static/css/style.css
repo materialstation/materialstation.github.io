@@ -588,3 +588,14 @@ img { max-width: 100%; height: auto; }
 .lang-filter button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
 .lang-filter button[aria-pressed="true"] span { opacity: .85; }
 .tile[hidden] { display: none; }
+
+/* Dil filtresi: sade sekmeler */
+.lang-filter { gap: 28px; margin-top: 26px; border-bottom: 1px solid var(--line); width: fit-content; }
+.lang-filter button, .lang-filter button:hover, .lang-filter button[aria-pressed="true"] {
+  background: none; border: 0; border-radius: 0; padding: 0 0 10px; margin-bottom: -1px;
+  font-family: var(--sans); font-size: 15.5px; font-weight: 500; letter-spacing: 0; text-transform: none;
+  color: var(--muted); border-bottom: 2px solid transparent;
+}
+.lang-filter button:hover { color: var(--ink); }
+.lang-filter button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+.tile-lang { font-size: 10.5px; padding: 2px 8px; background: rgba(20,16,36,.55) !important; letter-spacing: 1px; }
