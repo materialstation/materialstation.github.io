@@ -28,4 +28,5 @@ The greenish tears start with oxidation. The copper surface first forms a thin o
 
 The good news is that copper does not break down at the molecular level because of oxidation. Instead, it can form ***[a protective layer](https://rotaxmetals.net/how-to-oxidize-copper/ "Source: rotaxmetals.net")*** that keeps the core of the material from further damage.
 
-To make a long story short, as a Bob Dylan song reminds us, beauty and pain are rarely strangers.
+To make the long story short, “Behind every beautiful thing, there’s been some kind of pain “
+- Bob Dylan.
