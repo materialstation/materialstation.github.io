@@ -567,3 +567,5 @@ img { max-width: 100%; height: auto; }
 .tile-media.fit-contain { background: var(--surface); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tile-media.fit-contain, :root:not([data-theme="light"]) figure.diagram img { background: #ece9f3; border-radius: 12px; } }
 :root[data-theme="dark"] .tile-media.fit-contain, :root[data-theme="dark"] figure.diagram img { background: #ece9f3; border-radius: 12px; }
+/* Şemalar masaüstünde yazı sütunundan biraz daha geniş */
+@media (min-width: 1000px) { .prose figure.diagram { margin-left: -90px; margin-right: -90px; } }
