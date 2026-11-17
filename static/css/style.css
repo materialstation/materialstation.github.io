@@ -558,3 +558,12 @@ img { max-width: 100%; height: auto; }
 @media (max-width: 760px) { .scroll-cue { display: none; } .marquee { bottom: 34px; } .intro-inner { padding-bottom: 100px; } }
 .marquee { bottom: 78px; } .scroll-cue { bottom: 40px; }
 @media (max-width: 760px) { .marquee { bottom: 40px; } }
+/* Kapak: şema gibi geniş görseller kırpılmadan sığdırılır */
+.tile-media.fit-contain { background: #fff; }
+.tile-media.fit-contain img { object-fit: contain; padding: 4%; }
+.tile-media.fit-contain::after { display: none; }
+.tile:hover .tile-media.fit-contain img { transform: scale(1.03); }
+/* Şeffaf arka planlı çizimler: koyu temada okunabilsin diye açık zemin */
+.tile-media.fit-contain { background: var(--surface); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tile-media.fit-contain, :root:not([data-theme="light"]) figure.diagram img { background: #ece9f3; border-radius: 12px; } }
+:root[data-theme="dark"] .tile-media.fit-contain, :root[data-theme="dark"] figure.diagram img { background: #ece9f3; border-radius: 12px; }
