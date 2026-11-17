@@ -2,20 +2,22 @@
 title: "The Discovery of the Raman Effect"
 date: 2021-11-25
 description: "Story of a discovery"
+image: "../raman-experiment-schematic.png"
+image_fit: "contain"
 tags: ["Raman effect", "light scattering", "spectroscopy", "C.V. Raman", "history of science"]
 ---
 
 The beauty of the blue Mediterranean Sea mesmerized a great scientist and led to the discovery of the Raman effect.
 
 <figure style="max-width:260px;margin-left:auto;margin-right:auto">
-  <img src="../cv-raman-portrait.jpg" alt="Black-and-white oval portrait of C.V. Raman wearing a turban">
+  <img src="../cv-raman-portrait.png" alt="Black-and-white oval portrait of C.V. Raman wearing a turban">
   <figcaption><a href="https://en.wikipedia.org/wiki/C._V._Raman" title="Source: en.wikipedia.org"><strong>C.V. Raman</strong></a> <span style="display:block;margin-top:4px;font-size:.9em;opacity:.8">Image: Wikimedia Commons (public domain)</span></figcaption>
 </figure>
 
 In 1871, Lord Rayleigh analyzed scattered sunlight and concluded that the intensity of the scattered light is inversely proportional to the **[fourth power](https://en.wikipedia.org/wiki/Rayleigh_scattering "Source: en.wikipedia.org")** of its wavelength. According to Rayleigh, the color of the Mediterranean Sea was nothing more than a **[reflection](https://www.semanticscholar.org/paper/On-the-Molecular-Scattering-of-Light-in-Water-and-Raman/1ab684d45c8055599aaaf2ef47d5e8c23b95439b "Source: semanticscholar.org")** of the blue sky.
 
 <figure style="max-width:240px;margin-left:auto;margin-right:auto">
-  <img src="../lord-rayleigh-portrait.jpg" alt="Black-and-white oval portrait of Lord Rayleigh in profile">
+  <img src="../lord-rayleigh-portrait.png" alt="Black-and-white oval portrait of Lord Rayleigh in profile">
   <figcaption><a href="https://en.wikipedia.org/wiki/John_William_Strutt,_3rd_Baron_Rayleigh" title="Source: en.wikipedia.org"><strong>John William Strutt, Lord Rayleigh</strong></a> <span style="display:block;margin-top:4px;font-size:.9em;opacity:.8">Image: Wikimedia Commons (public domain)</span></figcaption>
 </figure>
 
@@ -23,8 +25,8 @@ The Indian scientist Chandrasekhara Venkata Raman was not satisfied with Rayleig
 
 He simply described his observation as *“a new kind of radiation or light emission from atoms and molecules”*.
 
-<figure>
-  <img src="../raman-experiment-schematic-signed.jpg" alt="Diagram: sunlight passes through a telescope, a violet filter, a liquid sample and a green filter to an observer; Raman- and Rayleigh-scattered light are shown as dashed lines">
+<figure class="diagram">
+  <img src="../raman-experiment-schematic.png" alt="Diagram: sunlight passes through a telescope, a violet filter, a liquid sample and a green filter to an observer; Raman- and Rayleigh-scattered light are shown as dashed lines">
   <figcaption>Schematic illustration of the discovery of the Raman effect</figcaption>
 </figure>
 
