@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{- $p := site.Language.Params }}
 {{- $tr := eq site.Language.Lang "tr" }}
-{{- $writings := where site.RegularPages "Section" "in" (slice "writings" "yazilar") }}
+{{- $writings := partial "all-writings.html" . }}
 {{- $cases := where site.RegularPages "Section" "in" (slice "case-studies" "vaka-analizleri") }}
 {{- $wsec := site.GetPage (cond $tr "/yazilar" "/writings") }}
 {{- $book := site.GetPage (cond $tr "/kitabim" "/my-book") }}

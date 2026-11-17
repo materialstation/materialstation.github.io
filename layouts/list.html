@@ -1,15 +1,32 @@
 {{ define "main" }}
 {{- $tr := eq site.Language.Lang "tr" }}
+{{- $isW := in (slice "writings" "yazilar") .Section }}
+{{- $pages := cond $isW (partial "all-writings.html" .) .Pages }}
+{{- $nTR := len (where $pages "Language.Lang" "tr") }}{{ $nEN := len (where $pages "Language.Lang" "en") }}
 <header class="lab-head">
   <div class="wrap">
     <p class="lab-eyebrow mono"><span class="dot"></span>{{ site.Params.brand | default site.Title }} / {{ .Title }}</p>
     <h1>{{ .Title }}</h1>
     {{ with .Content }}<div class="lead">{{ . }}</div>{{ end }}
-    <p class="lab-count mono">{{ printf "%02d" (len .Pages) }} {{ if $tr }}içerik{{ else }}entries{{ end }}</p>
+    <p class="lab-count mono">{{ printf "%02d" (len $pages) }} {{ if $tr }}içerik{{ else }}entries{{ end }}{{ if $isW }} · {{ $nTR }} TR · {{ $nEN }} EN{{ end }}</p>
+    {{ if and $isW (gt $nTR 0) (gt $nEN 0) }}
+    <div class="lang-filter mono" role="group" aria-label="{{ if $tr }}Dile göre filtrele{{ else }}Filter by language{{ end }}">
+      <button type="button" data-f="all" aria-pressed="true">{{ if $tr }}Tümü{{ else }}All{{ end }} <span>{{ len $pages }}</span></button>
+      <button type="button" data-f="tr" aria-pressed="false">Türkçe <span>{{ $nTR }}</span></button>
+      <button type="button" data-f="en" aria-pressed="false" lang="en">English <span>{{ $nEN }}</span></button>
+    </div>
+    {{ end }}
   </div>
 </header>
 <div class="wrap tiles">
-  {{ range $i, $p := .Pages }}{{ partial "tile.html" (dict "page" $p "i" (add $i 1) "featured" (eq $i 0)) }}
+  {{ range $i, $p := $pages }}{{ partial "tile.html" (dict "page" $p "i" (add $i 1) "featured" (eq $i 0)) }}
   {{ else }}<p class="empty">{{ T "nothing_yet" }}</p>{{ end }}
 </div>
+{{ if $isW }}<script>
+(function(){var bs=document.querySelectorAll('.lang-filter button'),ts=document.querySelectorAll('.tiles .tile');
+bs.forEach(function(b){b.addEventListener('click',function(){var f=b.dataset.f;
+bs.forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+var first=true;ts.forEach(function(t){var show=f==='all'||t.dataset.lang===f;t.hidden=!show;
+t.classList.toggle('tile-feat',show&&first);if(show)first=false;});});});})();
+</script>{{ end }}
 {{ end }}
