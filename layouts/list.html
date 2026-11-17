@@ -8,12 +8,11 @@
     <p class="lab-eyebrow mono"><span class="dot"></span>{{ site.Params.brand | default site.Title }} / {{ .Title }}</p>
     <h1>{{ .Title }}</h1>
     {{ with .Content }}<div class="lead">{{ . }}</div>{{ end }}
-    <p class="lab-count mono">{{ printf "%02d" (len $pages) }} {{ if $tr }}içerik{{ else }}entries{{ end }}{{ if $isW }} · {{ $nTR }} TR · {{ $nEN }} EN{{ end }}</p>
-    {{ if and $isW (gt $nTR 0) (gt $nEN 0) }}
+        {{ if and $isW (gt $nTR 0) (gt $nEN 0) }}
     <div class="lang-filter mono" role="group" aria-label="{{ if $tr }}Dile göre filtrele{{ else }}Filter by language{{ end }}">
-      <button type="button" data-f="all" aria-pressed="true">{{ if $tr }}Tümü{{ else }}All{{ end }} <span>{{ len $pages }}</span></button>
-      <button type="button" data-f="tr" aria-pressed="false">Türkçe <span>{{ $nTR }}</span></button>
-      <button type="button" data-f="en" aria-pressed="false" lang="en">English <span>{{ $nEN }}</span></button>
+      <button type="button" data-f="all" aria-pressed="true">{{ if $tr }}Tümü{{ else }}All{{ end }}</button>
+      <button type="button" data-f="tr" aria-pressed="false">Türkçe</button>
+      <button type="button" data-f="en" aria-pressed="false" lang="en">English</button>
     </div>
     {{ end }}
   </div>
