@@ -1,0 +1,37 @@
+---
+title: "Farkında mısın?"
+date: 2022-01-14
+description: "Biyomimikri"
+image: "../morpho-kanat-yapisi.png"
+image_fit: "contain"
+tags: ["biyomimikri", "Morpho kelebeği", "fotonik kristal", "yapısal renk", "tekstil"]
+---
+
+Yorucu geçen iş günlerinin yorgunluğunu atmanın en garanti yolu açık havada yürümektir. Temiz hava insanı hafifletir. Ayaklar belli bir tempoyu yakalayınca artık görevi gözler devralır. Sonra da beyin işi bitirir.
+
+**Nasıl yani?**
+
+Yürürken temel motivasyonunuz yalnızca anda kalıp keyif almak olursa, gözlem yeteneğiniz tavan yapar ve beyniniz size, gördüklerinizle bağlantı kurabileceğiniz ve işinize yarayabilecek senaryolar sunmaya başlar. Tam da böyle anlarda doğadan ilham alınır; yani malzeme dünyasında biyomimikri ile yeni fikirler doğar.
+
+**Örnek verelim.**
+
+Güneş ılık ılık yüzünüze vururken, birden masmavi bir **[Morpho kelebeği](https://www.britannica.com/animal/morpho-insect "Kaynak: britannica.com")** geçiverdi önünüzden. Kelebeğin kanatlarındaki renk geçişleri sizi büyüledi. Mavi kanatların eteklerinin siyah çizgilerle son bulması ve kanatlarını kapattığında göz efekti veren noktalı renk cümbüşü kelebeğe mükemmel bir kamuflaj yeteneği verse de siz bu güzelliğin farkına varabildiniz.
+
+**Ne şanslısınız!**
+
+İşte tam o anda zihninizin soru sormasına izin verdiniz ve merakınız sizi yeni keşiflere sürükledi.
+
+**Ne gizli bu kelebeğin kanatlarında?**
+
+Kısa bir araştırmayla sorunuzun cevabını bulabilirsiniz, hem de **[bilimsel kanıtlarla](https://mse.utoronto.ca/future/nanontario/ "Kaynak: mse.utoronto.ca")** :) Kelebeğin kanatlarında mavi tonlarda parlayan renk geçişinin temel sebebi, kanatların nano yapısının ışığın kırılmasına ve yansımasına imkân sağlamasıdır. Güneş ışınları, doğal bir ***[fotonik kristal](https://tr.wikipedia.org/wiki/Fotonik_kristal "Kaynak: tr.wikipedia.org")*** gibi davranan kelebeğin nano yapılı kanat pullarıyla buluşunca ortaya büyüleyici bir güzellik çıkar.
+
+<figure class="diagram">
+  <img src="../morpho-kanat-yapisi.png" alt="Üç adımlı şema: 1. mavi Morpho kelebeği kanadı; 2. kanat pullarının yakın görünümü; 3. pulların üzerindeki çam ağacı biçimli nano sırtlar; beyaz ışık gelip yalnızca mavi ışık yansıyor">
+  <figcaption>Morpho kelebeğinin kanadından nano yapılı sırtlara: mavi renk pigmentten değil, yapıdan gelir</figcaption>
+</figure>
+
+**Bunu fark etmen neyi mi değiştirir?**
+
+Tıpkı **[Morphotex](https://www.nanotechproject.tech/cpi/products/morphotex-r-fiber/ "Kaynak: nanotechproject.tech")**’in yaptığı gibi, kimyasal boyalarla kumaşı yıpratmadan ve tabii ki müşterinin sağlığını riske atmadan farklı renkleri doğal olarak tek bir kumaşta buluşturabilirsin. Bu mükemmel fikir, kalınlıkları 70 ile 100 nm arasında değişen polyester ve naylon ipliklerle kelebeğin pul yapısının taklit edilmesi ve aynı görsel etkiyi elde etmek için ipliklerin dikkatlice lamine edilmesiyle hayat buldu.
+
+Ne dersin, yürürken kaçırdığın çok şey vardır belki de? :)
