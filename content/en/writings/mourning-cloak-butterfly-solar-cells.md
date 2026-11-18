@@ -36,3 +36,14 @@ While the eye surface of the Mourning Cloak butterfly shows the moth-eye effect,
 I believe that when we observe, feel and try to understand nature without losing our ability to think, we will definitely end up with another breathtaking discovery.
 
 Do you agree with me? :)
+
+
+## References
+
+1. Erb, U. (Ed.). *nanOntario Newsletter, Year 2: “Bio-designed Anti-reflective Surfaces.”* Department of Materials Science and Engineering, University of Toronto. [https://mse.utoronto.ca/wp-content/uploads/2014/05/nanOntario-Newsletter-Year2.pdf](https://mse.utoronto.ca/wp-content/uploads/2014/05/nanOntario-Newsletter-Year2.pdf)
+2. Lee, K. C., & Erb, U. (2013). Grain boundaries and coincidence site lattices in the corneal nanonipple structure of the Mourning Cloak butterfly. *Beilstein Journal of Nanotechnology*, 4, 292. [https://doi.org/10.3762/bjnano.4.32](https://doi.org/10.3762/bjnano.4.32)
+3. Lee, K. C., Yu, Q., & Erb, U. (2016). Mesostructure of ordered corneal nano-nipple arrays: The role of 5–7 coordination defects. *Scientific Reports*, 6, 28342. [https://doi.org/10.1038/srep28342](https://doi.org/10.1038/srep28342)
+4. Clapham, P. B., & Hutley, M. C. (1973). Reduction of lens reflexion by the “moth eye” principle. *Nature*, 244, 281–282. [https://doi.org/10.1038/244281a0](https://doi.org/10.1038/244281a0)
+5. Sun, C.-H., Jiang, P., & Jiang, B. (2008). Broadband moth-eye antireflection coatings on silicon. *Applied Physics Letters*, 92(6), 061112. [https://doi.org/10.1063/1.2870080](https://doi.org/10.1063/1.2870080)
+6. Phys.org (2008, February 22). Moth eyes may hold key to more efficient solar cells. [https://phys.org/news/2008-02-moth-eyes-key-efficient-solar.html](https://phys.org/news/2008-02-moth-eyes-key-efficient-solar.html)
+7. 
