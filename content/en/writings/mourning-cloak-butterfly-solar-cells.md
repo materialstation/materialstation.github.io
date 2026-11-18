@@ -2,10 +2,13 @@
 title: "How Could the Mourning Cloak Butterfly Inspire Solar-Cell Technology?"
 date: 2022-01-14
 description: "Anti-reflective surface structure: nano-nipples"
-image: "../moth-eye-structure.png"
-image_fit: "contain"
 tags: ["biomimicry", "moth-eye effect", "anti-reflective surfaces", "solar cells", "SEM"]
 ---
+
+<figure>
+  <img src="../mourning-cloak-solar-panel.jpg" alt="A Mourning Cloak butterfly with dark maroon wings, a cream border and blue spots resting on the edge of a solar panel whose surface shows a honeycomb pattern, in soft morning light">
+  <figcaption>A Mourning Cloak butterfly on a solar panel <span style="display:block;margin-top:4px;font-size:.9em;opacity:.8">Image: generated with Gemini (AI)</span></figcaption>
+</figure>
 
 I have always believed that butterflies hide something behind their artistic beauty. Whenever I see a butterfly on a warm spring day, I am amazed at the way it floats through the air, showing off its colorful forewings and hindwings. Although both pairs of wings are fragile, they are strong enough to keep the butterfly’s body in the air and make flying easy.
 
