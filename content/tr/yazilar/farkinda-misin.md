@@ -26,7 +26,7 @@ Güneş ılık ılık yüzünüze vururken, birden masmavi bir **[Morpho kelebe�
 
 **Ne gizli bu kelebeğin kanatlarında?**
 
-Kısa bir araştırmayla sorunuzun cevabını bulabilirsiniz, hem de **[bilimsel kanıtlarla](https://mse.utoronto.ca/future/nanontario/ "Kaynak: mse.utoronto.ca")** :) Kelebeğin kanatlarında mavi tonlarda parlayan renk geçişinin temel sebebi, kanatların nano yapısının ışığın kırılmasına ve yansımasına imkân sağlamasıdır. Güneş ışınları, doğal bir ***[fotonik kristal](https://tr.wikipedia.org/wiki/Fotonik_kristal "Kaynak: tr.wikipedia.org")*** gibi davranan kelebeğin nano yapılı kanat pullarıyla buluşunca ortaya büyüleyici bir güzellik çıkar.
+Kısa bir araştırmayla sorunuzun cevabını bulabilirsiniz, hem de **[bilimsel kanıtlarla]([https://mse.utoronto.ca/future/nanontario/ "Kaynak: mse.utoronto.ca](https://doi.org/10.1098/rspb.1999.0794 "Kaynak: Proceedings of the Royal Society B")")** :) Kelebeğin kanatlarında mavi tonlarda parlayan renk geçişinin temel sebebi, kanatların nano yapısının ışığın kırılmasına ve yansımasına imkân sağlamasıdır. Güneş ışınları, doğal bir ***[fotonik kristal](https://tr.wikipedia.org/wiki/Fotonik_kristal "Kaynak: tr.wikipedia.org")*** gibi davranan kelebeğin nano yapılı kanat pullarıyla buluşunca ortaya büyüleyici bir güzellik çıkar.
 
 <figure class="diagram">
   <img src="../morpho-kanat-yapisi.png" alt="Üç adımlı şema: 1. mavi Morpho kelebeği kanadı; 2. kanat pullarının yakın görünümü; 3. pulların üzerindeki çam ağacı biçimli nano sırtlar; beyaz ışık gelip yalnızca mavi ışık yansıyor">
@@ -38,3 +38,11 @@ Kısa bir araştırmayla sorunuzun cevabını bulabilirsiniz, hem de **[bilimsel
 Tıpkı **[Morphotex](https://www.nanotechproject.tech/cpi/products/morphotex-r-fiber/ "Kaynak: nanotechproject.tech")**’in yaptığı gibi, kimyasal boyalarla kumaşı yıpratmadan ve tabii ki müşterinin sağlığını riske atmadan farklı renkleri doğal olarak tek bir kumaşta buluşturabilirsin. Bu mükemmel fikir, kalınlıkları 70 ile 100 nm arasında değişen polyester ve naylon ipliklerle kelebeğin pul yapısının taklit edilmesi ve aynı görsel etkiyi elde etmek için ipliklerin dikkatlice lamine edilmesiyle hayat buldu.
 
 Ne dersin, yürürken kaçırdığın çok şey vardır belki de? :)
+
+## Kaynakça
+
+1. Vukusic, P., Sambles, J. R., Lawrence, C. R., & Wootton, R. J. (1999). Quantified interference and diffraction in single Morpho butterfly scales. *Proceedings of the Royal Society B*, 266(1427), 1403–1411. [https://doi.org/10.1098/rspb.1999.0794](https://doi.org/10.1098/rspb.1999.0794)
+2. Kinoshita, S., Yoshioka, S., & Kawagoe, K. (2002). Mechanisms of structural colour in the Morpho butterfly: cooperation of regularity and irregularity in an iridescent scale. *Proceedings of the Royal Society B*, 269(1499), 1417–1421. [https://doi.org/10.1098/rspb.2002.2019](https://doi.org/10.1098/rspb.2002.2019)
+3. NASA Tech Briefs (2011). Butterfly-inspired fibers create diverse fabric colors. [https://www.techbriefs.com/component/content/article/10570-butterfly-inspired-fibers-create-diverse-fabric-colors](https://www.techbriefs.com/component/content/article/10570-butterfly-inspired-fibers-create-diverse-fabric-colors)
+4. Transmaterial. Morphotex: Chromagenic fiber (Teijin Fibers Limited). [https://transmaterial.net/morphotex](https://transmaterial.net/morphotex)
+5. Project on Emerging Nanotechnologies. Morphotex® Fiber (Teijin Fibers Limited). [https://www.nanotechproject.tech/cpi/products/morphotex-r-fiber/](https://www.nanotechproject.tech/cpi/products/morphotex-r-fiber/)
