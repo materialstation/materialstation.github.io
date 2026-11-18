@@ -2,10 +2,13 @@
 title: "Farkında mısın?"
 date: 2022-01-14
 description: "Biyomimikri"
-image: "../morpho-kanat-yapisi.png"
-image_fit: "contain"
 tags: ["biyomimikri", "Morpho kelebeği", "fotonik kristal", "yapısal renk", "tekstil"]
 ---
+
+<figure>
+  <img src="../morpho-kelebegi-yuruyus.jpg" alt="Kalem ve suluboya çizimi: ağaçlı bir patikada yürüyen birinin arkasından, önünden masmavi bir Morpho kelebeği uçuyor">
+  <figcaption>Yürüyüş yolunda bir Morpho kelebeği <span style="display:block;margin-top:4px;font-size:.9em;opacity:.8">Görsel: Gemini (yapay zekâ) ile üretilmiştir</span></figcaption>
+</figure>
 
 Yorucu geçen iş günlerinin yorgunluğunu atmanın en garanti yolu açık havada yürümektir. Temiz hava insanı hafifletir. Ayaklar belli bir tempoyu yakalayınca artık görevi gözler devralır. Sonra da beyin işi bitirir.
 
