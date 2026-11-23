@@ -1,5 +1,5 @@
 ---
-title: "Boyasız Boya: Kelebeğin Kanadındaki Sır"
+title: "Işıkla Boyanan Kelebek"
 date: 2022-01-14
 description: "Biyomimikri"
 tags: ["biyomimikri", "Morpho kelebeği", "fotonik kristal", "yapısal renk", "tekstil"]
@@ -10,11 +10,11 @@ tags: ["biyomimikri", "Morpho kelebeği", "fotonik kristal", "yapısal renk", "t
   <figcaption>Yürüyüş yolunda bir Morpho kelebeği <span style="display:block;margin-top:4px;font-size:.9em;opacity:.8">Görsel: Gemini (yapay zekâ) ile üretilmiştir</span></figcaption>
 </figure>
 
-Yorucu geçen iş günlerinin yorgunluğunu atmanın en garanti yolu açık havada yürümektir. Temiz hava insanı hafifletir. Ayaklar belli bir tempoyu yakalayınca artık görevi gözler devralır. Sonra da beyin işi bitirir.
+Zihinsel yorgunluğu atmanın en garanti yolu açık havada yürümektir. Temiz hava insanı hafifletir. Ayaklar belli bir tempoyu yakalayınca artık görevi gözler devralır. Sonra da beyin işi bitirir.
 
 **Nasıl yani?**
 
-Yürürken temel motivasyonunuz yalnızca anda kalıp keyif almak olursa, gözlem yeteneğiniz tavan yapar ve beyniniz size, gördüklerinizle bağlantı kurabileceğiniz ve işinize yarayabilecek senaryolar sunmaya başlar. Tam da böyle anlarda doğadan ilham alınır; yani malzeme dünyasında biyomimikri ile yeni fikirler doğar.
+Yürürken temel motivasyonunuz yalnızca anda kalıp keyif almak olursa, gözlem yeteneğiniz tavan yapar ve beyniniz size, gördüklerinizle bağlantı kurabileceğiniz ve işinize yarayabilecek senaryolar sunmaya başlar. Pek çok bilim insanının gün içinde doğada uzun yürüyüşler yaptığını mutlaka duymuşsunuzdur. Tam da böyle anlarda doğadan ilham alınır; yani malzeme dünyasında biyomimikri ile yeni fikirler doğabilir!
 
 **Örnek verelim.**
 
